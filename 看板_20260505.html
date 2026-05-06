@@ -380,16 +380,239 @@
             display: flex;
             align-items: center;
         }
+        
+        /* ========== 深色模式样式 ========== */
+        .dark-toggle {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 100;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .dark-toggle:hover {
+            background: #f5f5f5;
+        }
+        
+        /* 深色模式 */
+        body.dark {
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+        body.dark .login-box {
+            background: #16213e;
+            border-color: #333;
+        }
+        body.dark .header, body.dark .section {
+            background: #16213e;
+            border-color: #333;
+        }
+        body.dark .header h1, body.dark .section h2 {
+            color: #e0e0e0;
+        }
+        body.dark .ka-card {
+            background: #16213e;
+            border-color: #333;
+        }
+        body.dark .ka-tier {
+            background: #2a2a4a;
+            color: #aaa;
+        }
+        body.dark .ka-name {
+            color: #e0e0e0;
+        }
+        body.dark .stat-value, body.dark .progress-value {
+            color: #e0e0e0;
+        }
+        body.dark .progress-label, body.dark .kp-name, body.dark .kp-value {
+            color: #aaa;
+        }
+        body.dark .login-box h2 {
+            color: #e0e0e0;
+        }
+        body.dark input {
+            background: #0f3460;
+            color: #e0e0e0;
+            border-color: #555;
+        }
+        body.dark .export-btn {
+            background: #1976d2;
+        }
+        body.dark .export-btn:hover {
+            background: #1565c0;
+        }
+        body.dark .logout-btn {
+            background: #333;
+            color: #ddd;
+            border-color: #555;
+        }
+        body.dark .time-progress-bar, body.dark .progress-bar {
+            background: #333;
+        }
+        body.dark .overall-progress, body.dark .conclusion-section, body.dark .monthly-section {
+            background: #0f3460;
+        }
+        body.dark .monthly-table th, body.dark .monthly-table td {
+            border-color: #333;
+        }
+        body.dark .monthly-table th {
+            background: #1a1a2e;
+            color: #aaa;
+        }
+        body.dark .sub-tag, body.dark .kp-header, body.dark .gap-section {
+            background: #1a1a2e;
+        }
+        body.dark .sub-tag.FD渠道 {
+            background: #4a1a1a;
+            color: #f8a0a0;
+        }
+        body.dark .sub-tag.体验店 {
+            background: #1a2a4a;
+            color: #a0a0f8;
+        }
+        body.dark .vs-row {
+            background: #0f3460;
+        }
+        body.dark .dark-toggle {
+            background: #16213e;
+            border-color: #333;
+            color: #ffd700;
+        }
+        body.dark .rank-section {
+            background: #16213e;
+            border-color: #333;
+        }
+        body.dark .rank-item {
+            color: #e0e0e0;
+        }
+        body.dark .rank-badge {
+            background: #2a2a4a;
+            color: #ffd700;
+        }
+        body.dark .trend-toggle {
+            background: #2a2a4a;
+            color: #e0e0e0;
+        }
+        body.dark .trend-toggle:hover {
+            background: #3a3a5a;
+        }
+        
+        /* ========== 排名榜样式 ========== */
+        .rank-section {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .rank-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-right: 8px;
+        }
+        .rank-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .rank-item {
+            font-size: 12px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .rank-badge {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .rank-medal {
+            font-size: 14px;
+        }
+        .rank-arrow {
+            font-size: 10px;
+            margin-left: 2px;
+        }
+        .rank-arrow.up { color: #1a7a1a; }
+        .rank-arrow.down { color: #C7000B; }
+        .rank-arrow.same { color: #888; }
+        
+        /* ========== 趋势图样式 ========== */
+        .trend-section {
+            margin-top: 12px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+        .trend-toggle {
+            font-size: 12px;
+            color: #666;
+            background: #f5f5f5;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .trend-toggle:hover {
+            background: #eee;
+        }
+        .trend-chart {
+            margin-top: 10px;
+            background: #fafafa;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .trend-canvas {
+            width: 100%;
+            height: 120px;
+            display: block;
+        }
+        .trend-legend {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 6px;
+            font-size: 10px;
+            color: #666;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .legend-dot.phone { background: #C7000B; }
+        .legend-dot.fusion { background: #1976d2; }
+        
         @media (max-width: 768px) {
             body { padding: 12px; }
             .header h1 { font-size: 16px; }
             .stats { gap: 20px; }
             .stat-value { font-size: 20px; }
             .cards-container { grid-template-columns: 1fr; }
+            .dark-toggle { top: 10px; right: 10px; }
+            .rank-section { padding: 12px; }
         }
     </style>
 </head>
 <body>
+    <!-- 深色模式切换按钮 -->
+    <button class="dark-toggle" id="darkToggle" onclick="toggleDarkMode()" title="切换深色/浅色模式">🌙</button>
+    
     <div class="login-overlay" id="loginOverlay">
         <div class="login-box">
             <h2>FDKA分层分级达成看板</h2>
@@ -436,11 +659,17 @@
         
             </div>
             
+            <!-- 排名榜区域 -->
+            <div class="rank-section" id="rankSection">
+                <span class="rank-title">📊 达成排名</span>
+                <div class="rank-list" id="rankList"></div>
+            </div>
+            
             <div class="section">
                 <h2>KA达成情况</h2>
                 <div class="cards-container">
                     
-            <div class="ka-card ka-card healthy" data-ka="恒鑫达" data-export="{&quot;ka&quot;: &quot;恒鑫达&quot;, &quot;tier&quot;: &quot;TOP1000&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 800, &quot;fusion_target&quot;: 200, &quot;phone_so&quot;: 201.0, &quot;fusion_so&quot;: 102.0, &quot;phone_rate&quot;: 0.25125, &quot;fusion_rate&quot;: 0.51, &quot;overall_rate&quot;: 0.380625, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 115.0, &quot;fd_fusion&quot;: 46.0, &quot;bra_phone&quot;: 86.0, &quot;bra_fusion&quot;: 56.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 11.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 3.0, &quot;week&quot;: 0, &quot;month&quot;: 15.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 10.0, &quot;week&quot;: 0, &quot;month&quot;: 44.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 2.0, &quot;quarter&quot;: 0}}}">
+            <div class="ka-card ka-card healthy" data-ka="恒鑫达" data-export="{&quot;ka&quot;: &quot;恒鑫达&quot;, &quot;tier&quot;: &quot;TOP1000&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 800, &quot;fusion_target&quot;: 200, &quot;phone_so&quot;: 201.0, &quot;fusion_so&quot;: 102.0, &quot;phone_rate&quot;: 0.25125, &quot;fusion_rate&quot;: 0.51, &quot;overall_rate&quot;: 0.380625, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 115.0, &quot;fd_fusion&quot;: 46.0, &quot;bra_phone&quot;: 86.0, &quot;bra_fusion&quot;: 56.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 11.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 3.0, &quot;week&quot;: 0, &quot;month&quot;: 15.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 10.0, &quot;week&quot;: 0, &quot;month&quot;: 44.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 2.0, &quot;quarter&quot;: 0}}, &quot;daily_so&quot;: [{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 64.0, &quot;fusion&quot;: 30.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 36.0, &quot;fusion&quot;: 18.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 32.0, &quot;fusion&quot;: 28.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 43.0, &quot;fusion&quot;: 12.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 26.0, &quot;fusion&quot;: 14.0}]}">
                 <div class="card-header">
                     <span class="ka-name">恒鑫达</span>
                     <span class="ka-tier">TOP1000</span>
@@ -554,10 +783,18 @@
                 </div>
                 
             
+                    
+            <div class="trend-section">
+                <div class="trend-toggle" onclick="toggleTrend(this)">📈 查看趋势</div>
+                <div class="trend-chart" style="display:none;">
+                    <canvas class="trend-canvas" data-daily="[{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 64.0, &quot;fusion&quot;: 30.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 36.0, &quot;fusion&quot;: 18.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 32.0, &quot;fusion&quot;: 28.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 43.0, &quot;fusion&quot;: 12.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 26.0, &quot;fusion&quot;: 14.0}]"></canvas>
                 </div>
             </div>
             
-            <div class="ka-card ka-card healthy" data-ka="同舟" data-export="{&quot;ka&quot;: &quot;同舟&quot;, &quot;tier&quot;: &quot;TOP1500&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 300, &quot;fusion_target&quot;: 100, &quot;phone_so&quot;: 97.0, &quot;fusion_so&quot;: 34.0, &quot;phone_rate&quot;: 0.3233333333333333, &quot;fusion_rate&quot;: 0.34, &quot;overall_rate&quot;: 0.33166666666666667, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 97.0, &quot;fd_fusion&quot;: 34.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 2.0, &quot;week&quot;: 0, &quot;month&quot;: 4.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 3.0, &quot;week&quot;: 0, &quot;month&quot;: 15.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 10.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 1.0, &quot;quarter&quot;: 0}}}">
+                </div>
+            </div>
+            
+            <div class="ka-card ka-card healthy" data-ka="同舟" data-export="{&quot;ka&quot;: &quot;同舟&quot;, &quot;tier&quot;: &quot;TOP1500&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 300, &quot;fusion_target&quot;: 100, &quot;phone_so&quot;: 97.0, &quot;fusion_so&quot;: 34.0, &quot;phone_rate&quot;: 0.3233333333333333, &quot;fusion_rate&quot;: 0.34, &quot;overall_rate&quot;: 0.33166666666666667, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 97.0, &quot;fd_fusion&quot;: 34.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 2.0, &quot;week&quot;: 0, &quot;month&quot;: 4.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 3.0, &quot;week&quot;: 0, &quot;month&quot;: 15.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 10.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 1.0, &quot;quarter&quot;: 0}}, &quot;daily_so&quot;: [{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 25.0, &quot;fusion&quot;: 6.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 18.0, &quot;fusion&quot;: 6.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 18.0, &quot;fusion&quot;: 5.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 17.0, &quot;fusion&quot;: 5.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 19.0, &quot;fusion&quot;: 12.0}]}">
                 <div class="card-header">
                     <span class="ka-name">同舟</span>
                     <span class="ka-tier">TOP1500</span>
@@ -671,10 +908,18 @@
                 </div>
                 
             
+                    
+            <div class="trend-section">
+                <div class="trend-toggle" onclick="toggleTrend(this)">📈 查看趋势</div>
+                <div class="trend-chart" style="display:none;">
+                    <canvas class="trend-canvas" data-daily="[{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 25.0, &quot;fusion&quot;: 6.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 18.0, &quot;fusion&quot;: 6.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 18.0, &quot;fusion&quot;: 5.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 17.0, &quot;fusion&quot;: 5.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 19.0, &quot;fusion&quot;: 12.0}]"></canvas>
                 </div>
             </div>
             
-            <div class="ka-card ka-card healthy" data-ka="俊捷" data-export="{&quot;ka&quot;: &quot;俊捷&quot;, &quot;tier&quot;: &quot;TOP1500&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 300, &quot;fusion_target&quot;: 100, &quot;phone_so&quot;: 115.0, &quot;fusion_so&quot;: 24.0, &quot;phone_rate&quot;: 0.38333333333333336, &quot;fusion_rate&quot;: 0.24, &quot;overall_rate&quot;: 0.31166666666666665, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 96.0, &quot;fd_fusion&quot;: 9.0, &quot;bra_phone&quot;: 19.0, &quot;bra_fusion&quot;: 15.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 2.0, &quot;week&quot;: 0, &quot;month&quot;: 3.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 48.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 6.0, &quot;week&quot;: 0, &quot;month&quot;: 25.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 5.0, &quot;week&quot;: 0, &quot;month&quot;: 15.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 1.0, &quot;quarter&quot;: 0}}}">
+                </div>
+            </div>
+            
+            <div class="ka-card ka-card healthy" data-ka="俊捷" data-export="{&quot;ka&quot;: &quot;俊捷&quot;, &quot;tier&quot;: &quot;TOP1500&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 300, &quot;fusion_target&quot;: 100, &quot;phone_so&quot;: 115.0, &quot;fusion_so&quot;: 24.0, &quot;phone_rate&quot;: 0.38333333333333336, &quot;fusion_rate&quot;: 0.24, &quot;overall_rate&quot;: 0.31166666666666665, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 96.0, &quot;fd_fusion&quot;: 9.0, &quot;bra_phone&quot;: 19.0, &quot;bra_fusion&quot;: 15.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 2.0, &quot;week&quot;: 0, &quot;month&quot;: 3.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 48.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 6.0, &quot;week&quot;: 0, &quot;month&quot;: 25.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 5.0, &quot;week&quot;: 0, &quot;month&quot;: 15.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 1.0, &quot;quarter&quot;: 0}}, &quot;daily_so&quot;: [{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 37.0, &quot;fusion&quot;: 4.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 22.0, &quot;fusion&quot;: 4.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 24.0, &quot;fusion&quot;: 6.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 18.0, &quot;fusion&quot;: 6.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 14.0, &quot;fusion&quot;: 4.0}]}">
                 <div class="card-header">
                     <span class="ka-name">俊捷</span>
                     <span class="ka-tier">TOP1500</span>
@@ -788,10 +1033,18 @@
                 </div>
                 
             
+                    
+            <div class="trend-section">
+                <div class="trend-toggle" onclick="toggleTrend(this)">📈 查看趋势</div>
+                <div class="trend-chart" style="display:none;">
+                    <canvas class="trend-canvas" data-daily="[{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 37.0, &quot;fusion&quot;: 4.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 22.0, &quot;fusion&quot;: 4.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 24.0, &quot;fusion&quot;: 6.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 18.0, &quot;fusion&quot;: 6.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 14.0, &quot;fusion&quot;: 4.0}]"></canvas>
                 </div>
             </div>
             
-            <div class="ka-card ka-card healthy" data-ka="宏翔" data-export="{&quot;ka&quot;: &quot;宏翔&quot;, &quot;tier&quot;: &quot;TOP1000&quot;, &quot;chase_tier&quot;: &quot;TOP368&quot;, &quot;phone_target&quot;: 1300, &quot;fusion_target&quot;: 500, &quot;phone_so&quot;: 257.0, &quot;fusion_so&quot;: 180.0, &quot;phone_rate&quot;: 0.1976923076923077, &quot;fusion_rate&quot;: 0.36, &quot;overall_rate&quot;: 0.27884615384615385, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 197.0, &quot;fd_fusion&quot;: 164.0, &quot;bra_phone&quot;: 60.0, &quot;bra_fusion&quot;: 16.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 3.0, &quot;week&quot;: 0, &quot;month&quot;: 9.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 9.0, &quot;week&quot;: 0, &quot;month&quot;: 51.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 7.0, &quot;week&quot;: 0, &quot;month&quot;: 13.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 10.0, &quot;week&quot;: 0, &quot;month&quot;: 54.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 9.0, &quot;quarter&quot;: 0}}}">
+                </div>
+            </div>
+            
+            <div class="ka-card ka-card healthy" data-ka="宏翔" data-export="{&quot;ka&quot;: &quot;宏翔&quot;, &quot;tier&quot;: &quot;TOP1000&quot;, &quot;chase_tier&quot;: &quot;TOP368&quot;, &quot;phone_target&quot;: 1300, &quot;fusion_target&quot;: 500, &quot;phone_so&quot;: 257.0, &quot;fusion_so&quot;: 180.0, &quot;phone_rate&quot;: 0.1976923076923077, &quot;fusion_rate&quot;: 0.36, &quot;overall_rate&quot;: 0.27884615384615385, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 197.0, &quot;fd_fusion&quot;: 164.0, &quot;bra_phone&quot;: 60.0, &quot;bra_fusion&quot;: 16.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 3.0, &quot;week&quot;: 0, &quot;month&quot;: 9.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 9.0, &quot;week&quot;: 0, &quot;month&quot;: 51.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 7.0, &quot;week&quot;: 0, &quot;month&quot;: 13.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 10.0, &quot;week&quot;: 0, &quot;month&quot;: 54.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 9.0, &quot;quarter&quot;: 0}}, &quot;daily_so&quot;: [{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 58.0, &quot;fusion&quot;: 83.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 55.0, &quot;fusion&quot;: 31.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 47.0, &quot;fusion&quot;: 20.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 52.0, &quot;fusion&quot;: 20.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 45.0, &quot;fusion&quot;: 26.0}]}">
                 <div class="card-header">
                     <span class="ka-name">宏翔</span>
                     <span class="ka-tier">TOP1000→TOP368</span>
@@ -905,10 +1158,18 @@
                 </div>
                 
             
+                    
+            <div class="trend-section">
+                <div class="trend-toggle" onclick="toggleTrend(this)">📈 查看趋势</div>
+                <div class="trend-chart" style="display:none;">
+                    <canvas class="trend-canvas" data-daily="[{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 58.0, &quot;fusion&quot;: 83.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 55.0, &quot;fusion&quot;: 31.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 47.0, &quot;fusion&quot;: 20.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 52.0, &quot;fusion&quot;: 20.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 45.0, &quot;fusion&quot;: 26.0}]"></canvas>
                 </div>
             </div>
             
-            <div class="ka-card ka-card healthy" data-ka="亿丰达" data-export="{&quot;ka&quot;: &quot;亿丰达&quot;, &quot;tier&quot;: &quot;NDKA+&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 150, &quot;fusion_target&quot;: 30, &quot;phone_so&quot;: 31.0, &quot;fusion_so&quot;: 6.0, &quot;phone_rate&quot;: 0.20666666666666667, &quot;fusion_rate&quot;: 0.2, &quot;overall_rate&quot;: 0.20333333333333334, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 31.0, &quot;fd_fusion&quot;: 6.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 2.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 3.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}}}">
+                </div>
+            </div>
+            
+            <div class="ka-card ka-card healthy" data-ka="亿丰达" data-export="{&quot;ka&quot;: &quot;亿丰达&quot;, &quot;tier&quot;: &quot;NDKA+&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 150, &quot;fusion_target&quot;: 30, &quot;phone_so&quot;: 31.0, &quot;fusion_so&quot;: 6.0, &quot;phone_rate&quot;: 0.20666666666666667, &quot;fusion_rate&quot;: 0.2, &quot;overall_rate&quot;: 0.20333333333333334, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 31.0, &quot;fd_fusion&quot;: 6.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 2.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 3.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}}, &quot;daily_so&quot;: [{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 7.0, &quot;fusion&quot;: 1.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 10.0, &quot;fusion&quot;: 4.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 1.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 6.0, &quot;fusion&quot;: 0.0}]}">
                 <div class="card-header">
                     <span class="ka-name">亿丰达</span>
                     <span class="ka-tier">NDKA+</span>
@@ -1022,10 +1283,18 @@
                 </div>
                 
             
+                    
+            <div class="trend-section">
+                <div class="trend-toggle" onclick="toggleTrend(this)">📈 查看趋势</div>
+                <div class="trend-chart" style="display:none;">
+                    <canvas class="trend-canvas" data-daily="[{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 7.0, &quot;fusion&quot;: 1.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 10.0, &quot;fusion&quot;: 4.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 1.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 6.0, &quot;fusion&quot;: 0.0}]"></canvas>
                 </div>
             </div>
             
-            <div class="ka-card ka-card healthy" data-ka="北斗" data-export="{&quot;ka&quot;: &quot;北斗&quot;, &quot;tier&quot;: &quot;TOP1000&quot;, &quot;chase_tier&quot;: &quot;TOP368&quot;, &quot;phone_target&quot;: 1300, &quot;fusion_target&quot;: 500, &quot;phone_so&quot;: 383.0, &quot;fusion_so&quot;: 55.0, &quot;phone_rate&quot;: 0.2946153846153846, &quot;fusion_rate&quot;: 0.11, &quot;overall_rate&quot;: 0.2023076923076923, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 282.0, &quot;fd_fusion&quot;: 20.0, &quot;bra_phone&quot;: 101.0, &quot;bra_fusion&quot;: 35.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 2.0, &quot;week&quot;: 0, &quot;month&quot;: 13.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 33.0, &quot;week&quot;: 0, &quot;month&quot;: 179.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 1.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 11.0, &quot;week&quot;: 0, &quot;month&quot;: 72.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 3.0, &quot;quarter&quot;: 0}}}">
+                </div>
+            </div>
+            
+            <div class="ka-card ka-card healthy" data-ka="北斗" data-export="{&quot;ka&quot;: &quot;北斗&quot;, &quot;tier&quot;: &quot;TOP1000&quot;, &quot;chase_tier&quot;: &quot;TOP368&quot;, &quot;phone_target&quot;: 1300, &quot;fusion_target&quot;: 500, &quot;phone_so&quot;: 383.0, &quot;fusion_so&quot;: 55.0, &quot;phone_rate&quot;: 0.2946153846153846, &quot;fusion_rate&quot;: 0.11, &quot;overall_rate&quot;: 0.2023076923076923, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 282.0, &quot;fd_fusion&quot;: 20.0, &quot;bra_phone&quot;: 101.0, &quot;bra_fusion&quot;: 35.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 2.0, &quot;week&quot;: 0, &quot;month&quot;: 13.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 33.0, &quot;week&quot;: 0, &quot;month&quot;: 179.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 1.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 11.0, &quot;week&quot;: 0, &quot;month&quot;: 72.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 3.0, &quot;quarter&quot;: 0}}, &quot;daily_so&quot;: [{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 109.0, &quot;fusion&quot;: 15.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 106.0, &quot;fusion&quot;: 13.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 47.0, &quot;fusion&quot;: 7.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 69.0, &quot;fusion&quot;: 8.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 52.0, &quot;fusion&quot;: 12.0}]}">
                 <div class="card-header">
                     <span class="ka-name">北斗</span>
                     <span class="ka-tier">TOP1000→TOP368</span>
@@ -1139,10 +1408,18 @@
                 </div>
                 
             
+                    
+            <div class="trend-section">
+                <div class="trend-toggle" onclick="toggleTrend(this)">📈 查看趋势</div>
+                <div class="trend-chart" style="display:none;">
+                    <canvas class="trend-canvas" data-daily="[{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 109.0, &quot;fusion&quot;: 15.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 106.0, &quot;fusion&quot;: 13.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 47.0, &quot;fusion&quot;: 7.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 69.0, &quot;fusion&quot;: 8.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 52.0, &quot;fusion&quot;: 12.0}]"></canvas>
                 </div>
             </div>
             
-            <div class="ka-card ka-card healthy" data-ka="智顺" data-export="{&quot;ka&quot;: &quot;智顺&quot;, &quot;tier&quot;: &quot;NDKA+&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 150, &quot;fusion_target&quot;: 30, &quot;phone_so&quot;: 19.0, &quot;fusion_so&quot;: 7.0, &quot;phone_rate&quot;: 0.12666666666666668, &quot;fusion_rate&quot;: 0.23333333333333334, &quot;overall_rate&quot;: 0.18, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 19.0, &quot;fd_fusion&quot;: 7.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 1.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 3.0, &quot;week&quot;: 0, &quot;month&quot;: 9.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}}}">
+                </div>
+            </div>
+            
+            <div class="ka-card ka-card healthy" data-ka="智顺" data-export="{&quot;ka&quot;: &quot;智顺&quot;, &quot;tier&quot;: &quot;NDKA+&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 150, &quot;fusion_target&quot;: 30, &quot;phone_so&quot;: 19.0, &quot;fusion_so&quot;: 7.0, &quot;phone_rate&quot;: 0.12666666666666668, &quot;fusion_rate&quot;: 0.23333333333333334, &quot;overall_rate&quot;: 0.18, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 19.0, &quot;fd_fusion&quot;: 7.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 1.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 3.0, &quot;week&quot;: 0, &quot;month&quot;: 9.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}}, &quot;daily_so&quot;: [{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 2.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 2.0, &quot;fusion&quot;: 1.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 2.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 7.0, &quot;fusion&quot;: 3.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 1.0}]}">
                 <div class="card-header">
                     <span class="ka-name">智顺</span>
                     <span class="ka-tier">NDKA+</span>
@@ -1256,10 +1533,18 @@
                 </div>
                 
             
+                    
+            <div class="trend-section">
+                <div class="trend-toggle" onclick="toggleTrend(this)">📈 查看趋势</div>
+                <div class="trend-chart" style="display:none;">
+                    <canvas class="trend-canvas" data-daily="[{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 2.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 2.0, &quot;fusion&quot;: 1.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 2.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 7.0, &quot;fusion&quot;: 3.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 1.0}]"></canvas>
                 </div>
             </div>
             
-            <div class="ka-card ka-card healthy" data-ka="米阳" data-export="{&quot;ka&quot;: &quot;米阳&quot;, &quot;tier&quot;: &quot;NDKA+&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 150, &quot;fusion_target&quot;: 30, &quot;phone_so&quot;: 26.0, &quot;fusion_so&quot;: 4.0, &quot;phone_rate&quot;: 0.17333333333333334, &quot;fusion_rate&quot;: 0.13333333333333333, &quot;overall_rate&quot;: 0.15333333333333332, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 26.0, &quot;fd_fusion&quot;: 4.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 4.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 10.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 1.0, &quot;quarter&quot;: 0}}}">
+                </div>
+            </div>
+            
+            <div class="ka-card ka-card healthy" data-ka="米阳" data-export="{&quot;ka&quot;: &quot;米阳&quot;, &quot;tier&quot;: &quot;NDKA+&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 150, &quot;fusion_target&quot;: 30, &quot;phone_so&quot;: 26.0, &quot;fusion_so&quot;: 4.0, &quot;phone_rate&quot;: 0.17333333333333334, &quot;fusion_rate&quot;: 0.13333333333333333, &quot;overall_rate&quot;: 0.15333333333333332, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 26.0, &quot;fd_fusion&quot;: 4.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 4.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 10.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 1.0, &quot;quarter&quot;: 0}}, &quot;daily_so&quot;: [{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 8.0, &quot;fusion&quot;: 1.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 8.0, &quot;fusion&quot;: 2.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 3.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 3.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 1.0}]}">
                 <div class="card-header">
                     <span class="ka-name">米阳</span>
                     <span class="ka-tier">NDKA+</span>
@@ -1373,10 +1658,18 @@
                 </div>
                 
             
+                    
+            <div class="trend-section">
+                <div class="trend-toggle" onclick="toggleTrend(this)">📈 查看趋势</div>
+                <div class="trend-chart" style="display:none;">
+                    <canvas class="trend-canvas" data-daily="[{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 8.0, &quot;fusion&quot;: 1.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 8.0, &quot;fusion&quot;: 2.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 3.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 3.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 1.0}]"></canvas>
                 </div>
             </div>
             
-            <div class="ka-card ka-card healthy" data-ka="铭洋" data-export="{&quot;ka&quot;: &quot;铭洋&quot;, &quot;tier&quot;: &quot;TOP1500&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 300, &quot;fusion_target&quot;: 100, &quot;phone_so&quot;: 39.0, &quot;fusion_so&quot;: 10.0, &quot;phone_rate&quot;: 0.13, &quot;fusion_rate&quot;: 0.1, &quot;overall_rate&quot;: 0.115, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 39.0, &quot;fd_fusion&quot;: 10.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 3.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 9.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 5.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 2.0, &quot;quarter&quot;: 0}}}">
+                </div>
+            </div>
+            
+            <div class="ka-card ka-card healthy" data-ka="铭洋" data-export="{&quot;ka&quot;: &quot;铭洋&quot;, &quot;tier&quot;: &quot;TOP1500&quot;, &quot;chase_tier&quot;: &quot;&quot;, &quot;phone_target&quot;: 300, &quot;fusion_target&quot;: 100, &quot;phone_so&quot;: 39.0, &quot;fusion_so&quot;: 10.0, &quot;phone_rate&quot;: 0.13, &quot;fusion_rate&quot;: 0.1, &quot;overall_rate&quot;: 0.115, &quot;time_progress&quot;: 0.05434782608695652, &quot;health_status&quot;: &quot;healthy&quot;, &quot;fd_phone&quot;: 39.0, &quot;fd_fusion&quot;: 10.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;kp_data&quot;: {&quot;Mate 80&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 3.0, &quot;quarter&quot;: 0}, &quot;HI 80&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 9.0, &quot;quarter&quot;: 0}, &quot;Nova 14 Pro&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 0.0, &quot;quarter&quot;: 0}, &quot;双畅享系列&quot;: {&quot;daily&quot;: 1.0, &quot;week&quot;: 0, &quot;month&quot;: 5.0, &quot;quarter&quot;: 0}, &quot;畅享70X尊享版&quot;: {&quot;daily&quot;: 0.0, &quot;week&quot;: 0, &quot;month&quot;: 2.0, &quot;quarter&quot;: 0}}, &quot;daily_so&quot;: [{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 4.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 6.0, &quot;fusion&quot;: 1.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 7.0, &quot;fusion&quot;: 3.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 18.0, &quot;fusion&quot;: 2.0}]}">
                 <div class="card-header">
                     <span class="ka-name">铭洋</span>
                     <span class="ka-tier">TOP1500</span>
@@ -1490,6 +1783,14 @@
                 </div>
                 
             
+                    
+            <div class="trend-section">
+                <div class="trend-toggle" onclick="toggleTrend(this)">📈 查看趋势</div>
+                <div class="trend-chart" style="display:none;">
+                    <canvas class="trend-canvas" data-daily="[{&quot;date&quot;: &quot;4/29&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;4/30&quot;, &quot;phone&quot;: 0.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/1&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 4.0}, {&quot;date&quot;: &quot;5/2&quot;, &quot;phone&quot;: 6.0, &quot;fusion&quot;: 1.0}, {&quot;date&quot;: &quot;5/3&quot;, &quot;phone&quot;: 4.0, &quot;fusion&quot;: 0.0}, {&quot;date&quot;: &quot;5/4&quot;, &quot;phone&quot;: 7.0, &quot;fusion&quot;: 3.0}, {&quot;date&quot;: &quot;5/5&quot;, &quot;phone&quot;: 18.0, &quot;fusion&quot;: 2.0}]"></canvas>
+                </div>
+            </div>
+            
                 </div>
             </div>
             
@@ -1599,6 +1900,15 @@
                 statValues[0].textContent = hCount;
                 statValues[1].textContent = gCount;
                 statValues[2].textContent = rCount;
+            }
+            
+            // 生成排名榜
+            generateRankList();
+            
+            // 管理员显示完整排名榜，客户只显示排名区域标题
+            if (currentUser !== 'admin') {
+                document.getElementById('rankSection').style.display = 'flex';
+                // 保持排名显示但不强调名次
             }
         }
         
@@ -1795,6 +2105,200 @@
                 btn.textContent = '导出数据';
             }
         }
+        
+        // ========== 深色模式切换 ==========
+        function toggleDarkMode() {
+            const isDark = document.body.classList.toggle('dark');
+            localStorage.setItem('dashboard_dark_mode', isDark ? '1' : '0');
+            document.getElementById('darkToggle').textContent = isDark ? '☀️' : '🌙';
+        }
+        
+        function initDarkMode() {
+            const savedDark = localStorage.getItem('dashboard_dark_mode');
+            if (savedDark === '1') {
+                document.body.classList.add('dark');
+                document.getElementById('darkToggle').textContent = '☀️';
+            } else {
+                document.body.classList.remove('dark');
+                document.getElementById('darkToggle').textContent = '🌙';
+            }
+        }
+        
+        // ========== 排名榜生成 ==========
+        function generateRankList() {
+            const cards = document.querySelectorAll('.ka-card');
+            const rankingData = [];
+            
+            cards.forEach(card => {
+                const ka = card.getAttribute('data-ka');
+                // 只统计当前用户有权限看到的KA
+                if (allowedKAs.includes(ka)) {
+                    const exportAttr = card.getAttribute('data-export');
+                    if (exportAttr) {
+                        try {
+                            const data = JSON.parse(exportAttr.replace(/&quot;/g, '"'));
+                            rankingData.push({
+                                name: ka,
+                                rate: data.overall_rate || 0
+                            });
+                        } catch (e) {}
+                    }
+                }
+            });
+            
+            // 按达成率排序
+            rankingData.sort((a, b) => b.rate - a.rate);
+            
+            const medals = ['🥇', '🥈', '🥉'];
+            const rankList = document.getElementById('rankList');
+            rankList.innerHTML = rankingData.map((item, index) => {
+                const medal = index < 3 ? `<span class="rank-medal">${medals[index]}</span>` : '';
+                const rankNum = index + 1;
+                const rateStr = (item.rate * 100).toFixed(1);
+                // 简化版：第一次不显示升降箭头
+                return `<div class="rank-item">${rankNum}. ${item.name} <span class="rank-badge">${rateStr}%</span>${medal}</div>`;
+            }).join('');
+            
+            // 如果是客户（只看自己的），高亮自己的排名
+            if (currentUser !== 'admin' && rankingData.length > 0) {
+                const myRank = rankingData.findIndex(d => d.name === currentUser) + 1;
+                if (myRank > 0) {
+                    const rankItems = rankList.querySelectorAll('.rank-item');
+                    rankItems.forEach((item, index) => {
+                        if (index + 1 === myRank) {
+                            item.style.fontWeight = 'bold';
+                            item.style.color = '#C7000B';
+                        }
+                    });
+                }
+            }
+        }
+        
+        // ========== 趋势图折叠/展开 ==========
+        function toggleTrend(btn) {
+            const section = btn.nextElementSibling;
+            const isHidden = section.style.display === 'none';
+            section.style.display = isHidden ? 'block' : 'none';
+            btn.textContent = isHidden ? '📉 收起趋势' : '📈 查看趋势';
+            
+            // 如果展开，绘制图表
+            if (isHidden) {
+                const canvas = section.querySelector('.trend-canvas');
+                drawTrendChart(canvas);
+            }
+        }
+        
+        // ========== Canvas趋势图绘制 ==========
+        function drawTrendChart(canvas) {
+            if (!canvas) return;
+            
+            const dailyData = canvas.getAttribute('data-daily');
+            if (!dailyData) return;
+            
+            try {
+                const data = JSON.parse(dailyData.replace(/&quot;/g, '"'));
+                if (!data || data.length === 0) return;
+                
+                const ctx = canvas.getContext('2d');
+                const rect = canvas.getBoundingClientRect();
+                const dpr = window.devicePixelRatio || 1;
+                
+                // 设置canvas实际尺寸
+                canvas.width = rect.width * dpr;
+                canvas.height = rect.height * dpr;
+                ctx.scale(dpr, dpr);
+                
+                const width = rect.width;
+                const height = rect.height;
+                const padding = { top: 15, right: 15, bottom: 25, left: 35 };
+                const chartWidth = width - padding.left - padding.right;
+                const chartHeight = height - padding.top - padding.bottom;
+                
+                // 获取所有数值用于计算Y轴范围
+                const phoneValues = data.map(d => d.phone || 0);
+                const fusionValues = data.map(d => d.fusion || 0);
+                const allValues = [...phoneValues, ...fusionValues];
+                const maxValue = Math.max(...allValues, 1);
+                
+                // 绘制网格线
+                ctx.strokeStyle = '#e0e0e0';
+                ctx.lineWidth = 0.5;
+                for (let i = 0; i <= 4; i++) {
+                    const y = padding.top + (chartHeight / 4) * i;
+                    ctx.beginPath();
+                    ctx.moveTo(padding.left, y);
+                    ctx.lineTo(width - padding.right, y);
+                    ctx.stroke();
+                }
+                
+                // Y轴刻度
+                ctx.fillStyle = '#666';
+                ctx.font = '10px sans-serif';
+                ctx.textAlign = 'right';
+                ctx.textBaseline = 'middle';
+                for (let i = 0; i <= 4; i++) {
+                    const y = padding.top + (chartHeight / 4) * i;
+                    const value = Math.round(maxValue * (1 - i / 4));
+                    ctx.fillText(value.toString(), padding.left - 5, y);
+                }
+                
+                // X轴刻度（日期）
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'top';
+                data.forEach((d, i) => {
+                    const x = padding.left + (chartWidth / (data.length - 1)) * i;
+                    ctx.fillText(d.date, x, height - padding.bottom + 5);
+                });
+                
+                // 绘制折线
+                function drawLine(values, color) {
+                    ctx.strokeStyle = color;
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    values.forEach((val, i) => {
+                        const x = padding.left + (chartWidth / (data.length - 1)) * i;
+                        const y = padding.top + chartHeight - (val / maxValue) * chartHeight;
+                        if (i === 0) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    });
+                    ctx.stroke();
+                    
+                    // 绘制点
+                    values.forEach((val, i) => {
+                        const x = padding.left + (chartWidth / (data.length - 1)) * i;
+                        const y = padding.top + chartHeight - (val / maxValue) * chartHeight;
+                        ctx.beginPath();
+                        ctx.arc(x, y, 3, 0, Math.PI * 2);
+                        ctx.fillStyle = color;
+                        ctx.fill();
+                    });
+                }
+                
+                drawLine(phoneValues, '#C7000B');
+                drawLine(fusionValues, '#1976d2');
+                
+                // 添加图例
+                const legendHtml = `
+                    <div class="trend-legend">
+                        <div class="legend-item"><span class="legend-dot phone"></span>手机SO</div>
+                        <div class="legend-item"><span class="legend-dot fusion"></span>融合SO</div>
+                    </div>
+                `;
+                const chartDiv = canvas.parentElement;
+                let legendDiv = chartDiv.querySelector('.trend-legend');
+                if (!legendDiv) {
+                    chartDiv.insertAdjacentHTML('beforeend', legendHtml);
+                }
+                
+            } catch (e) {
+                console.error('绘制趋势图失败:', e);
+            }
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            initDarkMode();
+        });
     </script>
 </body>
 </html>
