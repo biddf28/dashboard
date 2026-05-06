@@ -269,12 +269,55 @@
             border-top: 1px solid #eee;
             padding-top: 10px;
         }
-        .monthly-item {
+        .monthly-table {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .monthly-table table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+        .monthly-table th, .monthly-table td {
+            border: 1px solid #eee;
+            padding: 4px 6px;
+            text-align: center;
+        }
+        .monthly-table th {
+            background: #f8f8f8;
+            color: #666;
+            font-weight: normal;
+        }
+        .monthly-table td {
+            color: #333;
+        }
+        .monthly-table .section-title {
+            background: #f0f0f0;
+            font-weight: 500;
+            color: #333;
+        }
+        .conclusion-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            background: #fafafa;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        .conclusion-item {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             font-size: 11px;
-            padding: 2px 0;
+        }
+        .conclusion-label {
             color: #666;
+        }
+        .conclusion-value {
+            color: #333;
+            font-weight: 500;
         }
         .gap-section {
             display: flex;
@@ -446,11 +489,29 @@
             </div>
             
             <div class="monthly-section">
-                <div class="monthly-item"><span>03月</span><span>暂无数据</span></div>
-                <div class="monthly-item"><span>04月</span><span>手机:1152 融合:417</span></div>
-                <div class="monthly-item"><span>昨日</span><span>手机:43 融合:12</span></div>
-                <div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-positive">+11</span> 融合:<span class="vs-negative">-16</span></span></div>
-                <div class="monthly-item"><span>趋势结论</span><span>手机向好，融合需关注</span></div>
+                <div class="monthly-table">
+                    <table>
+                        <tr><th colspan="3" class="section-title">月份历史</th></tr>
+                        <tr><th>3月</th><th>4月</th><th>当前月</th></tr>
+                        <tr>
+                            <td>暂无</td>
+                            <td>手机:1152 融合:417</td>
+                            <td>手机:201 融合:102</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr><th colspan="2" class="section-title">昨日数据</th></tr>
+                        <tr><td colspan="2">手机:43 融合:12</td></tr>
+                    </table>
+                    <table>
+                        <tr><th class="section-title">对比昨日</th></tr>
+                        <tr><td>手机:<span class="vs-positive">+11</span> 融合:<span class="vs-negative">-16</span></td></tr>
+                    </table>
+                </div>
+                <div class="conclusion-section">
+                    <div class="conclusion-item"><span class="conclusion-label">对比昨日结论</span><span class="conclusion-value">手机向好，融合需关注⚠️</span></div>
+                    <div class="conclusion-item"><span class="conclusion-label">整体结论</span><span class="conclusion-value">大幅领先，态势优秀🔥</span></div>
+                </div>
             </div>
             
             
@@ -540,11 +601,29 @@
             </div>
             
             <div class="monthly-section">
-                <div class="monthly-item"><span>03月</span><span>暂无数据</span></div>
-                <div class="monthly-item"><span>04月</span><span>手机:388 融合:120</span></div>
-                <div class="monthly-item"><span>昨日</span><span>手机:17 融合:5</span></div>
-                <div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-negative">-1</span> 融合:<span class="">--</span></span></div>
-                <div class="monthly-item"><span>趋势结论</span><span></span></div>
+                <div class="monthly-table">
+                    <table>
+                        <tr><th colspan="3" class="section-title">月份历史</th></tr>
+                        <tr><th>3月</th><th>4月</th><th>当前月</th></tr>
+                        <tr>
+                            <td>暂无</td>
+                            <td>手机:388 融合:120</td>
+                            <td>手机:97 融合:34</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr><th colspan="2" class="section-title">昨日数据</th></tr>
+                        <tr><td colspan="2">手机:17 融合:5</td></tr>
+                    </table>
+                    <table>
+                        <tr><th class="section-title">对比昨日</th></tr>
+                        <tr><td>手机:<span class="vs-negative">-1</span> 融合:<span class="">--</span></td></tr>
+                    </table>
+                </div>
+                <div class="conclusion-section">
+                    <div class="conclusion-item"><span class="conclusion-label">对比昨日结论</span><span class="conclusion-value"></span></div>
+                    <div class="conclusion-item"><span class="conclusion-label">整体结论</span><span class="conclusion-value">大幅领先，态势优秀🔥</span></div>
+                </div>
             </div>
             
             
@@ -634,11 +713,29 @@
             </div>
             
             <div class="monthly-section">
-                <div class="monthly-item"><span>03月</span><span>暂无数据</span></div>
-                <div class="monthly-item"><span>04月</span><span>手机:258 融合:95</span></div>
-                <div class="monthly-item"><span>昨日</span><span>手机:18 融合:6</span></div>
-                <div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-negative">-6</span> 融合:<span class="">--</span></span></div>
-                <div class="monthly-item"><span>趋势结论</span><span></span></div>
+                <div class="monthly-table">
+                    <table>
+                        <tr><th colspan="3" class="section-title">月份历史</th></tr>
+                        <tr><th>3月</th><th>4月</th><th>当前月</th></tr>
+                        <tr>
+                            <td>暂无</td>
+                            <td>手机:258 融合:95</td>
+                            <td>手机:115 融合:24</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr><th colspan="2" class="section-title">昨日数据</th></tr>
+                        <tr><td colspan="2">手机:18 融合:6</td></tr>
+                    </table>
+                    <table>
+                        <tr><th class="section-title">对比昨日</th></tr>
+                        <tr><td>手机:<span class="vs-negative">-6</span> 融合:<span class="">--</span></td></tr>
+                    </table>
+                </div>
+                <div class="conclusion-section">
+                    <div class="conclusion-item"><span class="conclusion-label">对比昨日结论</span><span class="conclusion-value"></span></div>
+                    <div class="conclusion-item"><span class="conclusion-label">整体结论</span><span class="conclusion-value">大幅领先，态势优秀🔥</span></div>
+                </div>
             </div>
             
             
@@ -728,11 +825,29 @@
             </div>
             
             <div class="monthly-section">
-                <div class="monthly-item"><span>03月</span><span>暂无数据</span></div>
-                <div class="monthly-item"><span>04月</span><span>手机:1538 融合:677</span></div>
-                <div class="monthly-item"><span>昨日</span><span>手机:52 融合:20</span></div>
-                <div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-positive">+5</span> 融合:<span class="">--</span></span></div>
-                <div class="monthly-item"><span>趋势结论</span><span></span></div>
+                <div class="monthly-table">
+                    <table>
+                        <tr><th colspan="3" class="section-title">月份历史</th></tr>
+                        <tr><th>3月</th><th>4月</th><th>当前月</th></tr>
+                        <tr>
+                            <td>暂无</td>
+                            <td>手机:1538 融合:677</td>
+                            <td>手机:257 融合:180</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr><th colspan="2" class="section-title">昨日数据</th></tr>
+                        <tr><td colspan="2">手机:52 融合:20</td></tr>
+                    </table>
+                    <table>
+                        <tr><th class="section-title">对比昨日</th></tr>
+                        <tr><td>手机:<span class="vs-positive">+5</span> 融合:<span class="">--</span></td></tr>
+                    </table>
+                </div>
+                <div class="conclusion-section">
+                    <div class="conclusion-item"><span class="conclusion-label">对比昨日结论</span><span class="conclusion-value"></span></div>
+                    <div class="conclusion-item"><span class="conclusion-label">整体结论</span><span class="conclusion-value">大幅领先，态势优秀🔥</span></div>
+                </div>
             </div>
             
             
@@ -822,11 +937,29 @@
             </div>
             
             <div class="monthly-section">
-                <div class="monthly-item"><span>03月</span><span>暂无数据</span></div>
-                <div class="monthly-item"><span>04月</span><span>手机:107 融合:84</span></div>
-                <div class="monthly-item"><span>昨日</span><span>手机:4 融合:0</span></div>
-                <div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="">--</span> 融合:<span class="vs-negative">-1</span></span></div>
-                <div class="monthly-item"><span>趋势结论</span><span></span></div>
+                <div class="monthly-table">
+                    <table>
+                        <tr><th colspan="3" class="section-title">月份历史</th></tr>
+                        <tr><th>3月</th><th>4月</th><th>当前月</th></tr>
+                        <tr>
+                            <td>暂无</td>
+                            <td>手机:107 融合:84</td>
+                            <td>手机:31 融合:6</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr><th colspan="2" class="section-title">昨日数据</th></tr>
+                        <tr><td colspan="2">手机:4 融合:0</td></tr>
+                    </table>
+                    <table>
+                        <tr><th class="section-title">对比昨日</th></tr>
+                        <tr><td>手机:<span class="">--</span> 融合:<span class="vs-negative">-1</span></td></tr>
+                    </table>
+                </div>
+                <div class="conclusion-section">
+                    <div class="conclusion-item"><span class="conclusion-label">对比昨日结论</span><span class="conclusion-value"></span></div>
+                    <div class="conclusion-item"><span class="conclusion-label">整体结论</span><span class="conclusion-value">大幅领先，态势优秀🔥</span></div>
+                </div>
             </div>
             
             
@@ -916,11 +1049,29 @@
             </div>
             
             <div class="monthly-section">
-                <div class="monthly-item"><span>03月</span><span>暂无数据</span></div>
-                <div class="monthly-item"><span>04月</span><span>手机:1156 融合:238</span></div>
-                <div class="monthly-item"><span>昨日</span><span>手机:69 融合:8</span></div>
-                <div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-positive">+22</span> 融合:<span class="vs-positive">+1</span></span></div>
-                <div class="monthly-item"><span>趋势结论</span><span>📈整体向好</span></div>
+                <div class="monthly-table">
+                    <table>
+                        <tr><th colspan="3" class="section-title">月份历史</th></tr>
+                        <tr><th>3月</th><th>4月</th><th>当前月</th></tr>
+                        <tr>
+                            <td>暂无</td>
+                            <td>手机:1156 融合:238</td>
+                            <td>手机:383 融合:55</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr><th colspan="2" class="section-title">昨日数据</th></tr>
+                        <tr><td colspan="2">手机:69 融合:8</td></tr>
+                    </table>
+                    <table>
+                        <tr><th class="section-title">对比昨日</th></tr>
+                        <tr><td>手机:<span class="vs-positive">+22</span> 融合:<span class="vs-positive">+1</span></td></tr>
+                    </table>
+                </div>
+                <div class="conclusion-section">
+                    <div class="conclusion-item"><span class="conclusion-label">对比昨日结论</span><span class="conclusion-value">整体向好📈</span></div>
+                    <div class="conclusion-item"><span class="conclusion-label">整体结论</span><span class="conclusion-value">大幅领先，态势优秀🔥</span></div>
+                </div>
             </div>
             
             
@@ -1010,11 +1161,29 @@
             </div>
             
             <div class="monthly-section">
-                <div class="monthly-item"><span>03月</span><span>暂无数据</span></div>
-                <div class="monthly-item"><span>04月</span><span>手机:60 融合:27</span></div>
-                <div class="monthly-item"><span>昨日</span><span>手机:7 融合:3</span></div>
-                <div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-positive">+3</span> 融合:<span class="vs-positive">+1</span></span></div>
-                <div class="monthly-item"><span>趋势结论</span><span>📈整体向好</span></div>
+                <div class="monthly-table">
+                    <table>
+                        <tr><th colspan="3" class="section-title">月份历史</th></tr>
+                        <tr><th>3月</th><th>4月</th><th>当前月</th></tr>
+                        <tr>
+                            <td>暂无</td>
+                            <td>手机:60 融合:27</td>
+                            <td>手机:19 融合:7</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr><th colspan="2" class="section-title">昨日数据</th></tr>
+                        <tr><td colspan="2">手机:7 融合:3</td></tr>
+                    </table>
+                    <table>
+                        <tr><th class="section-title">对比昨日</th></tr>
+                        <tr><td>手机:<span class="vs-positive">+3</span> 融合:<span class="vs-positive">+1</span></td></tr>
+                    </table>
+                </div>
+                <div class="conclusion-section">
+                    <div class="conclusion-item"><span class="conclusion-label">对比昨日结论</span><span class="conclusion-value">整体向好📈</span></div>
+                    <div class="conclusion-item"><span class="conclusion-label">整体结论</span><span class="conclusion-value">大幅领先，态势优秀🔥</span></div>
+                </div>
             </div>
             
             
@@ -1104,11 +1273,29 @@
             </div>
             
             <div class="monthly-section">
-                <div class="monthly-item"><span>03月</span><span>暂无数据</span></div>
-                <div class="monthly-item"><span>04月</span><span>手机:268 融合:27</span></div>
-                <div class="monthly-item"><span>昨日</span><span>手机:3 融合:0</span></div>
-                <div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="">--</span> 融合:<span class="">--</span></span></div>
-                <div class="monthly-item"><span>趋势结论</span><span></span></div>
+                <div class="monthly-table">
+                    <table>
+                        <tr><th colspan="3" class="section-title">月份历史</th></tr>
+                        <tr><th>3月</th><th>4月</th><th>当前月</th></tr>
+                        <tr>
+                            <td>暂无</td>
+                            <td>手机:268 融合:27</td>
+                            <td>手机:26 融合:4</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr><th colspan="2" class="section-title">昨日数据</th></tr>
+                        <tr><td colspan="2">手机:3 融合:0</td></tr>
+                    </table>
+                    <table>
+                        <tr><th class="section-title">对比昨日</th></tr>
+                        <tr><td>手机:<span class="">--</span> 融合:<span class="">--</span></td></tr>
+                    </table>
+                </div>
+                <div class="conclusion-section">
+                    <div class="conclusion-item"><span class="conclusion-label">对比昨日结论</span><span class="conclusion-value"></span></div>
+                    <div class="conclusion-item"><span class="conclusion-label">整体结论</span><span class="conclusion-value">大幅领先，态势优秀🔥</span></div>
+                </div>
             </div>
             
             
@@ -1198,11 +1385,29 @@
             </div>
             
             <div class="monthly-section">
-                <div class="monthly-item"><span>03月</span><span>暂无数据</span></div>
-                <div class="monthly-item"><span>04月</span><span>手机:181 融合:125</span></div>
-                <div class="monthly-item"><span>昨日</span><span>手机:7 融合:3</span></div>
-                <div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-positive">+3</span> 融合:<span class="vs-positive">+3</span></span></div>
-                <div class="monthly-item"><span>趋势结论</span><span>📈整体向好</span></div>
+                <div class="monthly-table">
+                    <table>
+                        <tr><th colspan="3" class="section-title">月份历史</th></tr>
+                        <tr><th>3月</th><th>4月</th><th>当前月</th></tr>
+                        <tr>
+                            <td>暂无</td>
+                            <td>手机:181 融合:125</td>
+                            <td>手机:39 融合:10</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr><th colspan="2" class="section-title">昨日数据</th></tr>
+                        <tr><td colspan="2">手机:7 融合:3</td></tr>
+                    </table>
+                    <table>
+                        <tr><th class="section-title">对比昨日</th></tr>
+                        <tr><td>手机:<span class="vs-positive">+3</span> 融合:<span class="vs-positive">+3</span></td></tr>
+                    </table>
+                </div>
+                <div class="conclusion-section">
+                    <div class="conclusion-item"><span class="conclusion-label">对比昨日结论</span><span class="conclusion-value">整体向好📈</span></div>
+                    <div class="conclusion-item"><span class="conclusion-label">整体结论</span><span class="conclusion-value">大幅领先，态势优秀🔥</span></div>
+                </div>
             </div>
             
             
