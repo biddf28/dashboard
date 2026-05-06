@@ -1196,8 +1196,52 @@
     
     <script>
         const accessConfig = {"admin": "KLM2026", "ka_codes": {"北斗": "BD2026", "宏翔": "HX2026", "恒鑫达": "HXD2026", "同舟": "TZ2026", "铭洋": "MY2026", "俊捷": "JJ2026", "米阳": "MY2026X", "亿丰达": "YFD2026", "智顺": "ZS2026"}};
-        let currentUser = null;
-        let allowedKAs = [];
+        const AUTH_EXPIRE_MS = 24 * 60 * 60 * 1000;
+        
+        function checkAuthFromStorage() {
+            const authCode = localStorage.getItem('dashboard_auth_code');
+            const authTime = localStorage.getItem('dashboard_auth_time');
+            const authKAs = localStorage.getItem('dashboard_auth_ka');
+            
+            if (!authCode || !authTime || !authKAs) {
+                return false;
+            }
+            
+            const elapsed = Date.now() - parseInt(authTime);
+            if (elapsed > AUTH_EXPIRE_MS) {
+                clearAuth();
+                return false;
+            }
+            
+            if (authCode === accessConfig.admin) {
+                currentUser = 'admin';
+                allowedKAs = ["俊捷", "同舟", "恒鑫达", "北斗", "亿丰达", "宏翔", "米阳", "智顺", "铭洋"];
+                return true;
+            }
+            
+            for (const [ka, kaCode] of Object.entries(accessConfig.ka_codes)) {
+                if (authCode === kaCode) {
+                    currentUser = ka;
+                    allowedKAs = [ka];
+                    return true;
+                }
+            }
+            
+            clearAuth();
+            return false;
+        }
+        
+        function saveAuth(code, kas) {
+            localStorage.setItem('dashboard_auth_code', code);
+            localStorage.setItem('dashboard_auth_ka', JSON.stringify(kas));
+            localStorage.setItem('dashboard_auth_time', Date.now().toString());
+        }
+        
+        function clearAuth() {
+            localStorage.removeItem('dashboard_auth_code');
+            localStorage.removeItem('dashboard_auth_ka');
+            localStorage.removeItem('dashboard_auth_time');
+        }
         
         function checkCode() {
             const code = document.getElementById('securityCode').value.trim();
@@ -1206,6 +1250,7 @@
             if (code === accessConfig.admin) {
                 currentUser = 'admin';
                 allowedKAs = ["俊捷", "同舟", "恒鑫达", "北斗", "亿丰达", "宏翔", "米阳", "智顺", "铭洋"];
+                saveAuth(code, ["俊捷", "同舟", "恒鑫达", "北斗", "亿丰达", "宏翔", "米阳", "智顺", "铭洋"]);
                 showDashboard();
                 return;
             }
@@ -1214,6 +1259,7 @@
                 if (code === kaCode) {
                     currentUser = ka;
                     allowedKAs = [ka];
+                    saveAuth(code, [ka]);
                     showDashboard();
                     return;
                 }
@@ -1237,6 +1283,7 @@
         }
         
         function logout() {
+            clearAuth();
             document.getElementById('loginOverlay').style.display = 'flex';
             document.getElementById('dashboardContent').style.display = 'none';
             document.getElementById('securityCode').value = '';
@@ -1248,6 +1295,15 @@
                 card.style.display = '';
             });
         }
+        
+        let currentUser = null;
+        let allowedKAs = [];
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            if (checkAuthFromStorage()) {
+                showDashboard();
+            }
+        });
     </script>
 </body>
 </html>
