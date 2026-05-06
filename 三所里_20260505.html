@@ -373,16 +373,239 @@
             display: flex;
             align-items: center;
         }
+        
+        /* ========== 深色模式样式 ========== */
+        .dark-toggle {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 100;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .dark-toggle:hover {
+            background: #f5f5f5;
+        }
+        
+        /* 深色模式 */
+        body.dark {
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+        body.dark .login-box {
+            background: #16213e;
+            border-color: #333;
+        }
+        body.dark .header, body.dark .section {
+            background: #16213e;
+            border-color: #333;
+        }
+        body.dark .header h1, body.dark .section h2 {
+            color: #e0e0e0;
+        }
+        body.dark .ka-card {
+            background: #16213e;
+            border-color: #333;
+        }
+        body.dark .ka-tier {
+            background: #2a2a4a;
+            color: #aaa;
+        }
+        body.dark .ka-name {
+            color: #e0e0e0;
+        }
+        body.dark .stat-value, body.dark .progress-value {
+            color: #e0e0e0;
+        }
+        body.dark .progress-label, body.dark .kp-name, body.dark .kp-value {
+            color: #aaa;
+        }
+        body.dark .login-box h2 {
+            color: #e0e0e0;
+        }
+        body.dark input {
+            background: #0f3460;
+            color: #e0e0e0;
+            border-color: #555;
+        }
+        body.dark .export-btn {
+            background: #1976d2;
+        }
+        body.dark .export-btn:hover {
+            background: #1565c0;
+        }
+        body.dark .logout-btn {
+            background: #333;
+            color: #ddd;
+            border-color: #555;
+        }
+        body.dark .time-progress-bar, body.dark .progress-bar {
+            background: #333;
+        }
+        body.dark .overall-progress, body.dark .conclusion-section, body.dark .monthly-section {
+            background: #0f3460;
+        }
+        body.dark .monthly-table th, body.dark .monthly-table td {
+            border-color: #333;
+        }
+        body.dark .monthly-table th {
+            background: #1a1a2e;
+            color: #aaa;
+        }
+        body.dark .sub-tag, body.dark .kp-header, body.dark .gap-section {
+            background: #1a1a2e;
+        }
+        body.dark .sub-tag.FD渠道 {
+            background: #4a1a1a;
+            color: #f8a0a0;
+        }
+        body.dark .sub-tag.体验店 {
+            background: #1a2a4a;
+            color: #a0a0f8;
+        }
+        body.dark .vs-row {
+            background: #0f3460;
+        }
+        body.dark .dark-toggle {
+            background: #16213e;
+            border-color: #333;
+            color: #ffd700;
+        }
+        body.dark .rank-section {
+            background: #16213e;
+            border-color: #333;
+        }
+        body.dark .rank-item {
+            color: #e0e0e0;
+        }
+        body.dark .rank-badge {
+            background: #2a2a4a;
+            color: #ffd700;
+        }
+        body.dark .trend-toggle {
+            background: #2a2a4a;
+            color: #e0e0e0;
+        }
+        body.dark .trend-toggle:hover {
+            background: #3a3a5a;
+        }
+        
+        /* ========== 排名榜样式 ========== */
+        .rank-section {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .rank-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-right: 8px;
+        }
+        .rank-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .rank-item {
+            font-size: 12px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .rank-badge {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .rank-medal {
+            font-size: 14px;
+        }
+        .rank-arrow {
+            font-size: 10px;
+            margin-left: 2px;
+        }
+        .rank-arrow.up { color: #1a7a1a; }
+        .rank-arrow.down { color: #C7000B; }
+        .rank-arrow.same { color: #888; }
+        
+        /* ========== 趋势图样式 ========== */
+        .trend-section {
+            margin-top: 12px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+        .trend-toggle {
+            font-size: 12px;
+            color: #666;
+            background: #f5f5f5;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .trend-toggle:hover {
+            background: #eee;
+        }
+        .trend-chart {
+            margin-top: 10px;
+            background: #fafafa;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .trend-canvas {
+            width: 100%;
+            height: 120px;
+            display: block;
+        }
+        .trend-legend {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 6px;
+            font-size: 10px;
+            color: #666;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .legend-dot.phone { background: #C7000B; }
+        .legend-dot.fusion { background: #1976d2; }
+        
         @media (max-width: 768px) {
             body { padding: 12px; }
             .header h1 { font-size: 16px; }
             .stats { gap: 20px; }
             .stat-value { font-size: 20px; }
             .cards-container { grid-template-columns: 1fr; }
+            .dark-toggle { top: 10px; right: 10px; }
+            .rank-section { padding: 12px; }
         }
     </style>
 </head>
 <body>
+    <!-- 深色模式切换按钮 -->
+    <button class="dark-toggle" id="darkToggle" onclick="toggleDarkMode()" title="切换深色/浅色模式">🌙</button>
+    
     <div class="login-overlay" id="loginOverlay">
         <div class="login-box">
             <h2>三所里战役达成看板</h2>
@@ -420,6 +643,12 @@
                     </div>
                 </div>
                 
+            </div>
+            
+            <!-- 排名榜区域 -->
+            <div class="rank-section" id="rankSection">
+                <span class="rank-title">📊 达成排名</span>
+                <div class="rank-list" id="rankList"></div>
             </div>
             
             <div class="section">
@@ -711,7 +940,6 @@
     </div>
     
     <!-- SheetJS CDN for Excel export -->
-    <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
     
     <script>
         const accessConfig = {"admin": "JW970804", "ka_codes": {"亿丰达": "422013", "俊捷": "125137", "北斗": "945102", "同舟": "535179", "喀什亮康": "672304", "喀什卓汇": "450525", "喀什宏景": "632485", "喀什广通": "491707", "喀什成阳": "829925", "喀什星脉": "160600", "喀什通镜": "241729", "图木舒克瑞城通讯": "660785", "宏翔": "221870", "岳普湖塔伊尔": "142195", "巴楚冠为": "596247", "恒鑫达": "501117", "新疆凯旗": "547444", "新疆扬子通讯": "325731", "智顺": "422032", "泽普铭扬": "883840", "疏勒县兴达": "733806", "米阳": "720378", "莎车时代": "652312", "莎车智讯": "160607", "莎车蜀豫": "913087", "铭洋": "576366", "麦盖提信威": "917939", "鼎富": "631081"}};
@@ -812,6 +1040,15 @@
                 statValues[1].textContent = gCount;
                 statValues[2].textContent = rCount;
             }
+            
+            // 生成排名榜
+            generateRankList();
+            
+            // 管理员显示完整排名榜，客户只显示排名区域标题
+            if (currentUser !== 'admin') {
+                document.getElementById('rankSection').style.display = 'flex';
+                // 保持排名显示但不强调名次
+            }
         }
         
         function logout() {
@@ -839,174 +1076,245 @@
         
         // 导出数据功能
         function exportData() {
-            const btn = document.getElementById('exportBtn');
-            btn.disabled = true;
-            btn.textContent = '导出中...';
+            const cards = document.querySelectorAll('.ka-card');
+            let rows = [];
+            let headers = [];
+            let isFirst = true;
             
-            try {
-                const cards = document.querySelectorAll('.ka-card');
-                const exportData = [];
+            cards.forEach(card => {
+                const ka = card.getAttribute('data-ka');
+                if (card.style.display === 'none') return;
                 
-                cards.forEach(card => {
-                    const ka = card.getAttribute('data-ka');
-                    // 只导出当前用户有权限看到的KA
-                    if (allowedKAs.includes(ka)) {
-                        const exportAttr = card.getAttribute('data-export');
-                        if (exportAttr) {
-                            try {
-                                const data = JSON.parse(exportAttr.replace(/&quot;/g, '"'));
-                                exportData.push(data);
-                            } catch (e) {
-                                console.error('解析导出数据失败:', e);
-                            }
-                        }
+                const exportData = card.getAttribute('data-export');
+                if (!exportData) return;
+                
+                try {
+                    const data = JSON.parse(exportData);
+                    if (isFirst) {
+                        headers = Object.keys(data);
+                        isFirst = false;
                     }
-                });
-                
-                if (exportData.length === 0) {
-                    alert('没有可导出的数据');
-                    btn.disabled = false;
-                    btn.textContent = '导出数据';
-                    return;
-                }
-                
-                const today = new Date();
-                const dateStr = today.getFullYear() + 
-                    String(today.getMonth() + 1).padStart(2, '0') + 
-                    String(today.getDate()).padStart(2, '0');
-                
-                let wb, filename;
-                
-                if (typeof XLSX !== 'undefined') {
-                    // 使用SheetJS生成Excel
-                    wb = XLSX.utils.book_new();
-                    
-                    if (dashboardType === 'fcka') {
-                        // FDKA分层分级看板导出
-                        const fckaData = exportData.map(d => {
-                            const kpData = d.kp_data || {};
-                            return {
-                                'KA': d.ka,
-                                '层级': d.tier,
-                                '冲刺层级': d.chase_tier,
-                                '手机目标': d.phone_target,
-                                '融合目标': d.fusion_target,
-                                '手机达成': d.phone_so,
-                                '融合达成': d.fusion_so,
-                                '手机达成率': d.phone_rate,
-                                '融合达成率': d.fusion_rate,
-                                '综合达成率': d.overall_rate,
-                                '时间进度': d.time_progress,
-                                '健康状态': d.health_status === 'healthy' ? '健康' : (d.health_status === 'good' ? '良好' : '风险'),
-                                'FD渠道手机': d.fd_phone,
-                                'FD渠道融合': d.fd_fusion,
-                                '体验店手机': d.bra_phone,
-                                '体验店融合': d.bra_fusion,
-                                ...Object.keys(kpData).reduce((acc, kpName) => {
-                                    const kp = kpData[kpName];
-                                    acc[`${kpName}今日`] = kp.daily;
-                                    acc[`${kpName}本周`] = kp.week;
-                                    acc[`${kpName}本月`] = kp.month;
-                                    acc[`${kpName}本季度`] = kp.quarter;
-                                    return acc;
-                                }, {})
-                            };
-                        });
-                        const ws = XLSX.utils.json_to_sheet(fckaData);
-                        XLSX.utils.book_append_sheet(wb, ws, 'FDKA分层分级');
-                        filename = `FDKA数据_${dateStr}.xlsx`;
-                    } else if (dashboardType === 'ssl') {
-                        // 三所里战役看板导出
-                        const sslData = exportData.map(d => ({
-                            'KA': d.ka,
-                            'FD出库SO': d.fd_so,
-                            'FD目标': d.fd_target,
-                            'FD达成率': d.fd_rate,
-                            '重点品SO': d.kp_so,
-                            '重点品目标': d.kp_target,
-                            '重点品达成率': d.kp_rate,
-                            '综合达成率': d.overall_rate,
-                            'FD渠道手机': d.fd_phone,
-                            'FD渠道融合': d.fd_fusion,
-                            '体验店手机': d.bra_phone,
-                            '体验店融合': d.bra_fusion,
-                            '对比昨日FD': d.vs_yesterday_fd
-                        }));
-                        const ws = XLSX.utils.json_to_sheet(sslData);
-                        XLSX.utils.book_append_sheet(wb, ws, '三所里战役');
-                        filename = `三所里战役数据_${dateStr}.xlsx`;
-                    } else {
-                        // 五一生意计划看板导出
-                        const wuyiData = exportData.map(d => ({
-                            'KA': d.ka,
-                            '专区达成率': d.fd_phone_rate,
-                            '体验店达成率': d.bra_phone_rate,
-                            '综合达成率': d.overall_rate,
-                            'FD手机达成': d.fd_phone,
-                            'ND手机达成': d.bra_phone,
-                            '专区融合达成': d.fd_fusion,
-                            '体验店融合达成': d.bra_fusion,
-                            '专区手机SO': d.fd_phone_so,
-                            '体验店手机SO': d.bra_phone_so,
-                            '专区融合SO': d.fd_fusion_so,
-                            '体验店融合SO': d.bra_fusion_so,
-                            '对比昨日手机': d.vs_yesterday_phone,
-                            '对比昨日融合': d.vs_yesterday_fusion
-                        }));
-                        const ws = XLSX.utils.json_to_sheet(wuyiData);
-                        XLSX.utils.book_append_sheet(wb, ws, '五一生意计划');
-                        filename = `五一生意计划数据_${dateStr}.xlsx`;
-                    }
-                    
-                    XLSX.writeFile(wb, filename);
-                } else {
-                    // SheetJS未加载，降级为CSV
-                    let csvContent = '';
-                    if (dashboardType === 'fcka') {
-                        csvContent = 'KA,层级,冲刺层级,手机目标,融合目标,手机达成,融合达成,手机达成率,融合达成率,综合达成率,时间进度,健康状态,FD渠道手机,FD渠道融合,体验店手机,体验店融合
+                    rows.push(headers.map(h => data[h]));
+                } catch(e) {}
+            });
+            
+            if (rows.length === 0) {
+                alert('没有可导出的数据');
+                return;
+            }
+            
+            // 生成CSV
+            let csv = '﻿'; // BOM for Excel中文支持
+            csv += headers.join(',') + '
 ';
-                        exportData.forEach(d => {
-                            const kpData = d.kp_data || {};
-                            const kpStr = Object.keys(kpData).length > 0 ? 
-                                Object.keys(kpData).map(kpName => {
-                                    const kp = kpData[kpName];
-                                    return `${kpName}今日,${kpName}本周,${kpName}本月,${kpName}本季度`;
-                                }).join(',') : '';
-                            csvContent += `${d.ka},${d.tier},${d.chase_tier},${d.phone_target},${d.fusion_target},${d.phone_so},${d.fusion_so},${d.phone_rate},${d.fusion_rate},${d.overall_rate},${d.time_progress},${d.health_status},${d.fd_phone},${d.fd_fusion},${d.bra_phone},${d.bra_fusion}` + (kpStr ? ',' + kpStr : '') + '
+            rows.forEach(row => {
+                csv += row.map(v => `"${String(v).replace(/"/g, '""')}"`).join(',') + '
 ';
-                        });
-                    } else if (dashboardType === 'ssl') {
-                        csvContent = 'KA,FD出库SO,FD目标,FD达成率,重点品SO,重点品目标,重点品达成率,综合达成率,FD渠道手机,FD渠道融合,体验店手机,体验店融合,对比昨日FD
-';
-                        exportData.forEach(d => {
-                            csvContent += `${d.ka},${d.fd_so},${d.fd_target},${d.fd_rate},${d.kp_so},${d.kp_target},${d.kp_rate},${d.overall_rate},${d.fd_phone},${d.fd_fusion},${d.bra_phone},${d.bra_fusion},${d.vs_yesterday_fd}
-`;
-                        });
-                    } else {
-                        csvContent = 'KA,专区达成率,体验店达成率,综合达成率,FD手机达成,ND手机达成,专区融合达成,体验店融合达成,对比昨日手机,对比昨日融合
-';
-                        exportData.forEach(d => {
-                            csvContent += `${d.ka},${d.fd_phone_rate},${d.bra_phone_rate},${d.overall_rate},${d.fd_phone},${d.bra_phone},${d.fd_fusion},${d.bra_fusion},${d.vs_yesterday_phone},${d.vs_yesterday_fusion}
-`;
-                        });
-                    }
-                    
-                    const blob = new Blob(['﻿' + csvContent], { type: 'text/csv;charset=utf-8;' });
-                    const url = URL.createObjectURL(blob);
-                    const link = document.createElement('a');
-                    link.href = url;
-                    link.download = `数据导出_${dateStr}.csv`;
-                    link.click();
-                    URL.revokeObjectURL(url);
-                }
-            } catch (e) {
-                console.error('导出失败:', e);
-                alert('导出失败: ' + e.message);
-            } finally {
-                btn.disabled = false;
-                btn.textContent = '导出数据';
+            });
+            
+            const blob = new Blob([csv], {type: 'text/csv;charset=utf-8'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            const dateStr = document.querySelector('.date-info')?.textContent?.replace(/-/g, '') || new Date().toISOString().slice(0,10).replace(/-/g,'');
+            a.href = url;
+            a.download = `FDKA数据_${dateStr}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+        
+        // ========== 深色模式切换 ==========
+        function toggleDarkMode() {
+            const isDark = document.body.classList.toggle('dark');
+            localStorage.setItem('dashboard_dark_mode', isDark ? '1' : '0');
+            document.getElementById('darkToggle').textContent = isDark ? '☀️' : '🌙';
+        }
+        
+        function initDarkMode() {
+            const savedDark = localStorage.getItem('dashboard_dark_mode');
+            if (savedDark === '1') {
+                document.body.classList.add('dark');
+                document.getElementById('darkToggle').textContent = '☀️';
+            } else {
+                document.body.classList.remove('dark');
+                document.getElementById('darkToggle').textContent = '🌙';
             }
         }
+        
+        // ========== 排名榜生成 ==========
+        function generateRankList() {
+            const cards = document.querySelectorAll('.ka-card');
+            const rankingData = [];
+            
+            cards.forEach(card => {
+                const ka = card.getAttribute('data-ka');
+                // 只统计当前用户有权限看到的KA
+                if (allowedKAs.includes(ka)) {
+                    const exportAttr = card.getAttribute('data-export');
+                    if (exportAttr) {
+                        try {
+                            const data = JSON.parse(exportAttr.replace(/&quot;/g, '"'));
+                            rankingData.push({
+                                name: ka,
+                                rate: data.overall_rate || 0
+                            });
+                        } catch (e) {}
+                    }
+                }
+            });
+            
+            // 按达成率排序
+            rankingData.sort((a, b) => b.rate - a.rate);
+            
+            const medals = ['🥇', '🥈', '🥉'];
+            const rankList = document.getElementById('rankList');
+            rankList.innerHTML = rankingData.map((item, index) => {
+                const medal = index < 3 ? `<span class="rank-medal">${medals[index]}</span>` : '';
+                const rankNum = index + 1;
+                const rateStr = (item.rate * 100).toFixed(1);
+                // 简化版：第一次不显示升降箭头
+                return `<div class="rank-item">${rankNum}. ${item.name} <span class="rank-badge">${rateStr}%</span>${medal}</div>`;
+            }).join('');
+            
+            // 如果是客户（只看自己的），高亮自己的排名
+            if (currentUser !== 'admin' && rankingData.length > 0) {
+                const myRank = rankingData.findIndex(d => d.name === currentUser) + 1;
+                if (myRank > 0) {
+                    const rankItems = rankList.querySelectorAll('.rank-item');
+                    rankItems.forEach((item, index) => {
+                        if (index + 1 === myRank) {
+                            item.style.fontWeight = 'bold';
+                            item.style.color = '#C7000B';
+                        }
+                    });
+                }
+            }
+        }
+        
+        // ========== 趋势图折叠/展开 ==========
+        function toggleTrend(btn) {
+            const section = btn.nextElementSibling;
+            const isHidden = section.style.display === 'none';
+            section.style.display = isHidden ? 'block' : 'none';
+            btn.textContent = isHidden ? '📉 收起趋势' : '📈 查看趋势';
+            
+            // 如果展开，绘制图表
+            if (isHidden) {
+                const canvas = section.querySelector('.trend-canvas');
+                drawTrendChart(canvas);
+            }
+        }
+        
+        // ========== Canvas趋势图绘制 ==========
+        function drawTrendChart(canvas) {
+            if (!canvas) return;
+            
+            const dailyData = canvas.getAttribute('data-daily');
+            if (!dailyData) return;
+            
+            try {
+                const data = JSON.parse(dailyData.replace(/&quot;/g, '"'));
+                if (!data || data.length === 0) return;
+                
+                const ctx = canvas.getContext('2d');
+                const rect = canvas.getBoundingClientRect();
+                const dpr = window.devicePixelRatio || 1;
+                
+                // 设置canvas实际尺寸
+                canvas.width = rect.width * dpr;
+                canvas.height = rect.height * dpr;
+                ctx.scale(dpr, dpr);
+                
+                const width = rect.width;
+                const height = rect.height;
+                const padding = { top: 15, right: 15, bottom: 25, left: 35 };
+                const chartWidth = width - padding.left - padding.right;
+                const chartHeight = height - padding.top - padding.bottom;
+                
+                // 获取所有数值用于计算Y轴范围
+                const phoneValues = data.map(d => d.phone || 0);
+                const fusionValues = data.map(d => d.fusion || 0);
+                const allValues = [...phoneValues, ...fusionValues];
+                const maxValue = Math.max(...allValues, 1);
+                
+                // 绘制网格线
+                ctx.strokeStyle = '#e0e0e0';
+                ctx.lineWidth = 0.5;
+                for (let i = 0; i <= 4; i++) {
+                    const y = padding.top + (chartHeight / 4) * i;
+                    ctx.beginPath();
+                    ctx.moveTo(padding.left, y);
+                    ctx.lineTo(width - padding.right, y);
+                    ctx.stroke();
+                }
+                
+                // Y轴刻度
+                ctx.fillStyle = '#666';
+                ctx.font = '10px sans-serif';
+                ctx.textAlign = 'right';
+                ctx.textBaseline = 'middle';
+                for (let i = 0; i <= 4; i++) {
+                    const y = padding.top + (chartHeight / 4) * i;
+                    const value = Math.round(maxValue * (1 - i / 4));
+                    ctx.fillText(value.toString(), padding.left - 5, y);
+                }
+                
+                // X轴刻度（日期）
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'top';
+                data.forEach((d, i) => {
+                    const x = padding.left + (chartWidth / (data.length - 1)) * i;
+                    ctx.fillText(d.date, x, height - padding.bottom + 5);
+                });
+                
+                // 绘制折线
+                function drawLine(values, color) {
+                    ctx.strokeStyle = color;
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    values.forEach((val, i) => {
+                        const x = padding.left + (chartWidth / (data.length - 1)) * i;
+                        const y = padding.top + chartHeight - (val / maxValue) * chartHeight;
+                        if (i === 0) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    });
+                    ctx.stroke();
+                    
+                    // 绘制点
+                    values.forEach((val, i) => {
+                        const x = padding.left + (chartWidth / (data.length - 1)) * i;
+                        const y = padding.top + chartHeight - (val / maxValue) * chartHeight;
+                        ctx.beginPath();
+                        ctx.arc(x, y, 3, 0, Math.PI * 2);
+                        ctx.fillStyle = color;
+                        ctx.fill();
+                    });
+                }
+                
+                drawLine(phoneValues, '#C7000B');
+                drawLine(fusionValues, '#1976d2');
+                
+                // 添加图例
+                const legendHtml = `
+                    <div class="trend-legend">
+                        <div class="legend-item"><span class="legend-dot phone"></span>手机SO</div>
+                        <div class="legend-item"><span class="legend-dot fusion"></span>融合SO</div>
+                    </div>
+                `;
+                const chartDiv = canvas.parentElement;
+                let legendDiv = chartDiv.querySelector('.trend-legend');
+                if (!legendDiv) {
+                    chartDiv.insertAdjacentHTML('beforeend', legendHtml);
+                }
+                
+            } catch (e) {
+                console.error('绘制趋势图失败:', e);
+            }
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            initDarkMode();
+        });
     </script>
 </body>
 </html>
