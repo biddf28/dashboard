@@ -1,28 +1,150 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>数据看板</title>
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f7; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-.nav-box { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 48px; text-align: center; }
-.nav-box h1 { font-size: 24px; color: #333; margin-bottom: 32px; }
-.nav-list { list-style: none; }
-.nav-list li { margin: 16px 0; }
-.nav-list a { display: inline-block; padding: 12px 32px; background: #C7000B; color: #fff; text-decoration: none; border-radius: 4px; font-size: 16px; }
-.nav-list a:hover { opacity: 0.9; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDKA 数据看板中心</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 24px;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            color: white;
+            font-size: 36px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 12px;
+        }
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 50px rgba(0,0,0,0.25);
+        }
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .card-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .card-tag {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 4px 12px;
+            background: #f0f0f0;
+            border-radius: 12px;
+            font-size: 12px;
+            color: #888;
+        }
+        .card-tag.new {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-<div class="nav-box">
-<h1>数据看板</h1>
-<ul class="nav-list">
-<li><a href="看板_20260505.html">FDKA分层分级达成看板</a></li>
-<li><a href="三所里_20260505.html">三所里战役看板</a></li>
-<li><a href="五一_20260505.html">五一生意计划看板</a></li>
-</ul>
-</div>
+    <div class="container">
+        <div class="header">
+            <h1>📊 FDKA 数据看板中心</h1>
+            <p>新疆间接零售伙伴 PSI 数据可视化系统</p>
+        </div>
+        
+        <div class="cards-grid">
+            <a href="inventory_20260505.html" class="card">
+                <div class="card-icon">📦</div>
+                <div class="card-title">全品类进销存看板</div>
+                <div class="card-desc">
+                    覆盖手机、平板、PC、穿戴、音频等全品类<br>
+                    展示ST/SO/库存/DOS等关键指标<br>
+                    支持按品类和产品筛选
+                </div>
+                <span class="card-tag new">NEW</span>
+            </a>
+            
+            <a href="看板_20260505.html" class="card">
+                <div class="card-icon">🏆</div>
+                <div class="card-title">FDKA分层分级达成看板</div>
+                <div class="card-desc">
+                    季度分层分级达成进度追踪<br>
+                    手机+融合双维度达成率<br>
+                    含重点品达成和月度拆解
+                </div>
+                <span class="card-tag">5月5日</span>
+            </a>
+            
+            <a href="三所里_20260505.html" class="card">
+                <div class="card-icon">🎯</div>
+                <div class="card-title">三所里战役达成看板</div>
+                <div class="card-desc">
+                    4月1日-5月5日战役周期追踪<br>
+                    FD出库+重点品达成率<br>
+                    含专区/体验店拆解
+                </div>
+                <span class="card-tag">5月5日</span>
+            </a>
+            
+            <a href="五一_20260505.html" class="card">
+                <div class="card-icon">🎉</div>
+                <div class="card-title">五一生意计划达成看板</div>
+                <div class="card-desc">
+                    五一7日(4/29-5/5)达成追踪<br>
+                    专区+体验店双渠道达成<br>
+                    含融合品类达成率
+                </div>
+                <span class="card-tag">5月5日</span>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>数据来源：PSI系统 | 更新时间：2026年5月5日</p>
+            <p style="margin-top:8px;">🔐 所有看板均需安全码登录，请联系管理员获取</p>
+        </div>
+    </div>
 </body>
 </html>

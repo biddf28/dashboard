@@ -1964,12 +1964,34 @@
             }
             
             // 生成CSV
+            // 英文key到中文的映射
+            const keyMap = {
+                'ka': '客户', 'tier': '层级', 'chase_tier': '冲刺层级',
+                'phone_target': '手机目标', 'fusion_target': '融合目标',
+                'phone_so': '手机达成', 'fusion_so': '融合达成',
+                'phone_rate': '手机达成率', 'fusion_rate': '融合达成率',
+                'overall_rate': '综合达成率', 'time_progress': '时间进度',
+                'health_status': '健康状态', 'phone_gap': '手机距目标差', 'fusion_gap': '融合距目标差',
+                'fd_phone': 'FD渠道手机', 'fd_fusion': 'FD渠道融合',
+                'bra_phone': '体验店手机', 'bra_fusion': '体验店融合',
+                'fd_so': 'FD出库SO', 'fd_target': 'FD目标', 'fd_rate': 'FD达成率',
+                'kp_so': '重点品SO', 'kp_target': '重点品目标', 'kp_rate': '重点品达成率',
+                'zone_rate': '专区达成率', 'store_rate': '体验店达成率',
+                'vs_yesterday_phone': '对比昨日手机', 'vs_yesterday_fusion': '对比昨日融合'
+            };
+            const cnHeaders = headers.map(h => keyMap[h] || h);
             let csv = '﻿'; // BOM for Excel中文支持
-            csv += headers.join(',') + '
-';
+            csv += cnHeaders.join(',') + String.fromCharCode(10);
             rows.forEach(row => {
-                csv += row.map(v => `"${String(v).replace(/"/g, '""')}"`).join(',') + '
-';
+                csv += row.map(v => {
+                    const s = String(v);
+                    // 达成率转百分比
+                    if (s.includes('0.') && !s.includes('目标')) {
+                        const num = parseFloat(s);
+                        if (!isNaN(num) && num > 0 && num < 1) return (num * 100).toFixed(1) + '%';
+                    }
+                    return String.fromCharCode(34) + s.replace(/"/g, String.fromCharCode(34)+String.fromCharCode(34)) + String.fromCharCode(34);
+                }).join(',') + String.fromCharCode(10);
             });
             
             const blob = new Blob([csv], {type: 'text/csv;charset=utf-8'});
