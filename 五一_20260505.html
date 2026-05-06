@@ -262,12 +262,55 @@
             border-top: 1px solid #eee;
             padding-top: 10px;
         }
-        .monthly-item {
+        .monthly-table {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .monthly-table table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+        .monthly-table th, .monthly-table td {
+            border: 1px solid #eee;
+            padding: 4px 6px;
+            text-align: center;
+        }
+        .monthly-table th {
+            background: #f8f8f8;
+            color: #666;
+            font-weight: normal;
+        }
+        .monthly-table td {
+            color: #333;
+        }
+        .monthly-table .section-title {
+            background: #f0f0f0;
+            font-weight: 500;
+            color: #333;
+        }
+        .conclusion-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            background: #fafafa;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        .conclusion-item {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             font-size: 11px;
-            padding: 2px 0;
+        }
+        .conclusion-label {
             color: #666;
+        }
+        .conclusion-value {
+            color: #333;
+            font-weight: 500;
         }
         .gap-section {
             display: flex;
@@ -763,13 +806,25 @@
             document.getElementById('loginOverlay').style.display = 'none';
             document.getElementById('dashboardContent').style.display = 'block';
             
+            let hCount = 0, gCount = 0, rCount = 0;
             const cards = document.querySelectorAll('.ka-card');
             cards.forEach(card => {
                 const ka = card.getAttribute('data-ka');
                 if (!allowedKAs.includes(ka)) {
                     card.style.display = 'none';
+                } else {
+                    if (card.classList.contains('healthy')) hCount++;
+                    else if (card.classList.contains('good')) gCount++;
+                    else if (card.classList.contains('risk')) rCount++;
                 }
             });
+            // 更新顶部统计（只统计允许看到的KA）
+            const statValues = document.querySelectorAll('.stats .stat-value');
+            if (statValues.length >= 3) {
+                statValues[0].textContent = hCount;
+                statValues[1].textContent = gCount;
+                statValues[2].textContent = rCount;
+            }
         }
         
         function logout() {
