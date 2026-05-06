@@ -277,6 +277,23 @@
         }
         .gap-item { color: #C7000B; }
         .gap-item.fusion-warning { color: #b8860b; }
+        .vs-row {
+            background: #f8f8f8;
+            padding: 4px 6px !important;
+            border-radius: 4px;
+            margin-top: 4px;
+        }
+        .vs-positive { color: #1a7a1a; font-weight: 500; }
+        .vs-negative { color: #C7000B; font-weight: 500; }
+        .wuyi-detail {
+            display: flex;
+            gap: 12px;
+            font-size: 11px;
+            margin-bottom: 6px;
+        }
+        .detail-item { color: #666; }
+        .sub-tag.专区渠道 { background: #fdf0f0; color: #C7000B; }
+        .sub-tag.体验店渠道 { background: #f0f0f8; color: #333; }
         .logout-btn {
             padding: 6px 12px;
             background: #f5f5f5;
@@ -318,15 +335,15 @@
                     <div class="date-info">2026-05-05</div>
                     <div class="stats">
                         <div class="stat healthy">
-                            <div class="stat-value">0</div>
+                            <div class="stat-value">1</div>
                             <div class="stat-label">健康</div>
                         </div>
                         <div class="stat good">
-                            <div class="stat-value">0</div>
+                            <div class="stat-value">4</div>
                             <div class="stat-label">良好</div>
                         </div>
                         <div class="stat risk">
-                            <div class="stat-value">9</div>
+                            <div class="stat-value">4</div>
                             <div class="stat-label">风险</div>
                         </div>
                     </div>
@@ -338,255 +355,300 @@
                 <h2>KA达成情况</h2>
                 <div class="cards-container">
                     
-        <div class="ka-card ka-card risk" data-ka="俊捷">
-            <div class="card-header">
-                <span class="ka-name">俊捷</span>
-                <span class="ka-tier">五一计划</span>
-            </div>
-            <div class="card-body">
-                <div class="progress-section">
-                    
-            <div class="progress-item">
-                <span class="progress-label">手机</span>
-                <div class="progress-bar"><div class="progress-fill" style="width: 37.2%"></div></div>
-                <span class="progress-value">37.2%</span>
-            </div>
-            <div class="progress-item">
-                <span class="progress-label">融合</span>
-                <div class="progress-bar"><div class="progress-fill fusion" style="width: 18.6%"></div></div>
-                <span class="progress-value">18.6%</span>
-            </div>
-            
-                    <div class="overall-progress">
-                        <span>整体</span>
-                        <strong>27.9%</strong>
-                    </div>
-                </div>
-                <div class="sub-accounts"><span class="sub-tag FD渠道">FD渠道 105</span> <span class="sub-tag 体验店">体验店 34</span> </div>
-            </div>
-        </div>
-        
-        <div class="ka-card ka-card risk" data-ka="宏翔">
-            <div class="card-header">
-                <span class="ka-name">宏翔</span>
-                <span class="ka-tier">五一计划</span>
-            </div>
-            <div class="card-body">
-                <div class="progress-section">
-                    
-            <div class="progress-item">
-                <span class="progress-label">手机</span>
-                <div class="progress-bar"><div class="progress-fill" style="width: 16.6%"></div></div>
-                <span class="progress-value">16.6%</span>
-            </div>
-            <div class="progress-item">
-                <span class="progress-label">融合</span>
-                <div class="progress-bar"><div class="progress-fill fusion" style="width: 28.7%"></div></div>
-                <span class="progress-value">28.7%</span>
-            </div>
-            
-                    <div class="overall-progress">
-                        <span>整体</span>
-                        <strong>22.6%</strong>
-                    </div>
-                </div>
-                <div class="sub-accounts"><span class="sub-tag FD渠道">FD渠道 362</span> <span class="sub-tag 体验店">体验店 77</span> </div>
-            </div>
-        </div>
-        
-        <div class="ka-card ka-card risk" data-ka="北斗">
+        <div class="ka-card ka-card healthy" data-ka="北斗">
             <div class="card-header">
                 <span class="ka-name">北斗</span>
-                <span class="ka-tier">五一计划</span>
+                <span class="ka-tier">五一7日</span>
             </div>
             <div class="card-body">
                 <div class="progress-section">
                     
             <div class="progress-item">
-                <span class="progress-label">手机</span>
-                <div class="progress-bar"><div class="progress-fill" style="width: 29.5%"></div></div>
-                <span class="progress-value">29.5%</span>
+                <span class="progress-label">专区</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 18.1%"></div></div>
+                <span class="progress-value">18.1%</span>
             </div>
             <div class="progress-item">
-                <span class="progress-label">融合</span>
-                <div class="progress-bar"><div class="progress-fill fusion" style="width: 13.6%"></div></div>
+                <span class="progress-label">体验店</span>
+                <div class="progress-bar"><div class="progress-fill fusion" style="width: 62.0%"></div></div>
+                <span class="progress-value">62.0%</span>
+            </div>
+            
+                    <div class="overall-progress">
+                        <span>综合达成</span>
+                        <strong>100.0%</strong>
+                    </div>
+                </div>
+                <div class="sub-accounts"><span class="sub-tag 专区渠道">专区 381</span> <span class="sub-tag 体验店渠道">体验店 190</span> </div>
+            <div class="wuyi-detail">
+                <span class="detail-item">手机:148</span>
+                <span class="detail-item">融合:77</span>
+            </div>
+            <div class="monthly-section"><div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-positive">+22</span> 融合:<span class="vs-positive">+1</span></span></div></div>
+            </div>
+        </div>
+        
+        <div class="ka-card ka-card good" data-ka="俊捷">
+            <div class="card-header">
+                <span class="ka-name">俊捷</span>
+                <span class="ka-tier">五一7日</span>
+            </div>
+            <div class="card-body">
+                <div class="progress-section">
+                    
+            <div class="progress-item">
+                <span class="progress-label">专区</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 13.6%"></div></div>
                 <span class="progress-value">13.6%</span>
             </div>
+            <div class="progress-item">
+                <span class="progress-label">体验店</span>
+                <div class="progress-bar"><div class="progress-fill fusion" style="width: 50.0%"></div></div>
+                <span class="progress-value">50.0%</span>
+            </div>
             
                     <div class="overall-progress">
-                        <span>整体</span>
-                        <strong>21.6%</strong>
+                        <span>综合达成</span>
+                        <strong>90.0%</strong>
                     </div>
                 </div>
-                <div class="sub-accounts"><span class="sub-tag FD渠道">FD渠道 303</span> <span class="sub-tag 体验店">体验店 141</span> </div>
+                <div class="sub-accounts"><span class="sub-tag 专区渠道">专区 116</span> <span class="sub-tag 体验店渠道">体验店 48</span> </div>
+            <div class="wuyi-detail">
+                <span class="detail-item">手机:29</span>
+                <span class="detail-item">融合:31</span>
+            </div>
+            <div class="monthly-section"><div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-negative">-6</span> 融合:<span class="">--</span></span></div></div>
             </div>
         </div>
         
-        <div class="ka-card ka-card risk" data-ka="智顺">
+        <div class="ka-card ka-card good" data-ka="智顺">
             <div class="card-header">
                 <span class="ka-name">智顺</span>
-                <span class="ka-tier">五一计划</span>
+                <span class="ka-tier">五一7日</span>
             </div>
             <div class="card-body">
                 <div class="progress-section">
                     
             <div class="progress-item">
-                <span class="progress-label">手机</span>
-                <div class="progress-bar"><div class="progress-fill" style="width: 19.6%"></div></div>
-                <span class="progress-value">19.6%</span>
+                <span class="progress-label">专区</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 20.8%"></div></div>
+                <span class="progress-value">20.8%</span>
             </div>
             <div class="progress-item">
-                <span class="progress-label">融合</span>
-                <div class="progress-bar"><div class="progress-fill fusion" style="width: 18.4%"></div></div>
-                <span class="progress-value">18.4%</span>
+                <span class="progress-label">体验店</span>
+                <div class="progress-bar"><div class="progress-fill fusion" style="width: 0.0%"></div></div>
+                <span class="progress-value">0.0%</span>
             </div>
             
                     <div class="overall-progress">
-                        <span>整体</span>
-                        <strong>19.0%</strong>
+                        <span>综合达成</span>
+                        <strong>87.0%</strong>
                     </div>
                 </div>
-                <div class="sub-accounts"><span class="sub-tag FD渠道">FD渠道 27</span> <span class="sub-tag 体验店">体验店 0</span> </div>
+                <div class="sub-accounts"><span class="sub-tag 专区渠道">专区 35</span> </div>
+            <div class="wuyi-detail">
+                <span class="detail-item">手机:5</span>
+                <span class="detail-item">融合:10</span>
+            </div>
+            <div class="monthly-section"><div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-positive">+3</span> 融合:<span class="vs-positive">+1</span></span></div></div>
             </div>
         </div>
         
-        <div class="ka-card ka-card risk" data-ka="同舟">
+        <div class="ka-card ka-card good" data-ka="宏翔">
+            <div class="card-header">
+                <span class="ka-name">宏翔</span>
+                <span class="ka-tier">五一7日</span>
+            </div>
+            <div class="card-body">
+                <div class="progress-section">
+                    
+            <div class="progress-item">
+                <span class="progress-label">专区</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 31.7%"></div></div>
+                <span class="progress-value">31.7%</span>
+            </div>
+            <div class="progress-item">
+                <span class="progress-label">体验店</span>
+                <div class="progress-bar"><div class="progress-fill fusion" style="width: 62.6%"></div></div>
+                <span class="progress-value">62.6%</span>
+            </div>
+            
+                    <div class="overall-progress">
+                        <span>综合达成</span>
+                        <strong>82.0%</strong>
+                    </div>
+                </div>
+                <div class="sub-accounts"><span class="sub-tag 专区渠道">专区 577</span> <span class="sub-tag 体验店渠道">体验店 117</span> </div>
+            <div class="wuyi-detail">
+                <span class="detail-item">手机:141</span>
+                <span class="detail-item">融合:335</span>
+            </div>
+            <div class="monthly-section"><div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-positive">+5</span> 融合:<span class="">--</span></span></div></div>
+            </div>
+        </div>
+        
+        <div class="ka-card ka-card good" data-ka="同舟">
             <div class="card-header">
                 <span class="ka-name">同舟</span>
-                <span class="ka-tier">五一计划</span>
+                <span class="ka-tier">五一7日</span>
             </div>
             <div class="card-body">
                 <div class="progress-section">
                     
             <div class="progress-item">
-                <span class="progress-label">手机</span>
-                <div class="progress-bar"><div class="progress-fill" style="width: 18.5%"></div></div>
-                <span class="progress-value">18.5%</span>
+                <span class="progress-label">专区</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 56.9%"></div></div>
+                <span class="progress-value">56.9%</span>
             </div>
             <div class="progress-item">
-                <span class="progress-label">融合</span>
-                <div class="progress-bar"><div class="progress-fill fusion" style="width: 13.9%"></div></div>
-                <span class="progress-value">13.9%</span>
+                <span class="progress-label">体验店</span>
+                <div class="progress-bar"><div class="progress-fill fusion" style="width: 0.0%"></div></div>
+                <span class="progress-value">0.0%</span>
             </div>
             
                     <div class="overall-progress">
-                        <span>整体</span>
-                        <strong>16.2%</strong>
+                        <span>综合达成</span>
+                        <strong>82.0%</strong>
                     </div>
                 </div>
-                <div class="sub-accounts"><span class="sub-tag FD渠道">FD渠道 132</span> <span class="sub-tag 体验店">体验店 0</span> </div>
+                <div class="sub-accounts"><span class="sub-tag 专区渠道">专区 170</span> </div>
+            <div class="wuyi-detail">
+                <span class="detail-item">手机:70</span>
+                <span class="detail-item">融合:45</span>
             </div>
-        </div>
-        
-        <div class="ka-card ka-card risk" data-ka="亿丰达">
-            <div class="card-header">
-                <span class="ka-name">亿丰达</span>
-                <span class="ka-tier">五一计划</span>
-            </div>
-            <div class="card-body">
-                <div class="progress-section">
-                    
-            <div class="progress-item">
-                <span class="progress-label">手机</span>
-                <div class="progress-bar"><div class="progress-fill" style="width: 20.3%"></div></div>
-                <span class="progress-value">20.3%</span>
-            </div>
-            <div class="progress-item">
-                <span class="progress-label">融合</span>
-                <div class="progress-bar"><div class="progress-fill fusion" style="width: 5.3%"></div></div>
-                <span class="progress-value">5.3%</span>
-            </div>
-            
-                    <div class="overall-progress">
-                        <span>整体</span>
-                        <strong>12.8%</strong>
-                    </div>
-                </div>
-                <div class="sub-accounts"><span class="sub-tag FD渠道">FD渠道 37</span> <span class="sub-tag 体验店">体验店 0</span> </div>
+            <div class="monthly-section"><div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-negative">-1</span> 融合:<span class="">--</span></span></div></div>
             </div>
         </div>
         
         <div class="ka-card ka-card risk" data-ka="恒鑫达">
             <div class="card-header">
                 <span class="ka-name">恒鑫达</span>
-                <span class="ka-tier">五一计划</span>
+                <span class="ka-tier">五一7日</span>
             </div>
             <div class="card-body">
                 <div class="progress-section">
                     
             <div class="progress-item">
-                <span class="progress-label">手机</span>
-                <div class="progress-bar"><div class="progress-fill" style="width: 13.2%"></div></div>
-                <span class="progress-value">13.2%</span>
+                <span class="progress-label">专区</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 46.3%"></div></div>
+                <span class="progress-value">46.3%</span>
             </div>
             <div class="progress-item">
-                <span class="progress-label">融合</span>
-                <div class="progress-bar"><div class="progress-fill fusion" style="width: 11.3%"></div></div>
-                <span class="progress-value">11.3%</span>
+                <span class="progress-label">体验店</span>
+                <div class="progress-bar"><div class="progress-fill fusion" style="width: 50.8%"></div></div>
+                <span class="progress-value">50.8%</span>
             </div>
             
                     <div class="overall-progress">
-                        <span>整体</span>
-                        <strong>12.2%</strong>
+                        <span>综合达成</span>
+                        <strong>69.0%</strong>
                     </div>
                 </div>
-                <div class="sub-accounts"><span class="sub-tag FD渠道">FD渠道 162</span> <span class="sub-tag 体验店">体验店 145</span> </div>
+                <div class="sub-accounts"><span class="sub-tag 专区渠道">专区 228</span> <span class="sub-tag 体验店渠道">体验店 190</span> </div>
+            <div class="wuyi-detail">
+                <span class="detail-item">手机:135</span>
+                <span class="detail-item">融合:132</span>
             </div>
-        </div>
-        
-        <div class="ka-card ka-card risk" data-ka="铭洋">
-            <div class="card-header">
-                <span class="ka-name">铭洋</span>
-                <span class="ka-tier">五一计划</span>
-            </div>
-            <div class="card-body">
-                <div class="progress-section">
-                    
-            <div class="progress-item">
-                <span class="progress-label">手机</span>
-                <div class="progress-bar"><div class="progress-fill" style="width: 13.2%"></div></div>
-                <span class="progress-value">13.2%</span>
-            </div>
-            <div class="progress-item">
-                <span class="progress-label">融合</span>
-                <div class="progress-bar"><div class="progress-fill fusion" style="width: 6.3%"></div></div>
-                <span class="progress-value">6.3%</span>
-            </div>
-            
-                    <div class="overall-progress">
-                        <span>整体</span>
-                        <strong>9.8%</strong>
-                    </div>
-                </div>
-                <div class="sub-accounts"><span class="sub-tag FD渠道">FD渠道 51</span> <span class="sub-tag 体验店">体验店 0</span> </div>
+            <div class="monthly-section"><div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-positive">+11</span> 融合:<span class="vs-negative">-16</span></span></div></div>
             </div>
         </div>
         
         <div class="ka-card ka-card risk" data-ka="米阳">
             <div class="card-header">
                 <span class="ka-name">米阳</span>
-                <span class="ka-tier">五一计划</span>
+                <span class="ka-tier">五一7日</span>
             </div>
             <div class="card-body">
                 <div class="progress-section">
                     
             <div class="progress-item">
-                <span class="progress-label">手机</span>
-                <div class="progress-bar"><div class="progress-fill" style="width: 11.5%"></div></div>
-                <span class="progress-value">11.5%</span>
+                <span class="progress-label">专区</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 22.7%"></div></div>
+                <span class="progress-value">22.7%</span>
             </div>
             <div class="progress-item">
-                <span class="progress-label">融合</span>
-                <div class="progress-bar"><div class="progress-fill fusion" style="width: 7.3%"></div></div>
-                <span class="progress-value">7.3%</span>
+                <span class="progress-label">体验店</span>
+                <div class="progress-bar"><div class="progress-fill fusion" style="width: 0.0%"></div></div>
+                <span class="progress-value">0.0%</span>
             </div>
             
                     <div class="overall-progress">
-                        <span>整体</span>
-                        <strong>9.4%</strong>
+                        <span>综合达成</span>
+                        <strong>64.0%</strong>
                     </div>
                 </div>
-                <div class="sub-accounts"><span class="sub-tag FD渠道">FD渠道 30</span> <span class="sub-tag 体验店">体验店 0</span> </div>
+                <div class="sub-accounts"><span class="sub-tag 专区渠道">专区 54</span> </div>
+            <div class="wuyi-detail">
+                <span class="detail-item">手机:10</span>
+                <span class="detail-item">融合:10</span>
+            </div>
+            <div class="monthly-section"><div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="">--</span> 融合:<span class="">--</span></span></div></div>
+            </div>
+        </div>
+        
+        <div class="ka-card ka-card risk" data-ka="亿丰达">
+            <div class="card-header">
+                <span class="ka-name">亿丰达</span>
+                <span class="ka-tier">五一7日</span>
+            </div>
+            <div class="card-body">
+                <div class="progress-section">
+                    
+            <div class="progress-item">
+                <span class="progress-label">专区</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 24.2%"></div></div>
+                <span class="progress-value">24.2%</span>
+            </div>
+            <div class="progress-item">
+                <span class="progress-label">体验店</span>
+                <div class="progress-bar"><div class="progress-fill fusion" style="width: 0.0%"></div></div>
+                <span class="progress-value">0.0%</span>
+            </div>
+            
+                    <div class="overall-progress">
+                        <span>综合达成</span>
+                        <strong>63.0%</strong>
+                    </div>
+                </div>
+                <div class="sub-accounts"><span class="sub-tag 专区渠道">专区 43</span> </div>
+            <div class="wuyi-detail">
+                <span class="detail-item">手机:8</span>
+                <span class="detail-item">融合:9</span>
+            </div>
+            <div class="monthly-section"><div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="">--</span> 融合:<span class="vs-negative">-1</span></span></div></div>
+            </div>
+        </div>
+        
+        <div class="ka-card ka-card risk" data-ka="铭洋">
+            <div class="card-header">
+                <span class="ka-name">铭洋</span>
+                <span class="ka-tier">五一7日</span>
+            </div>
+            <div class="card-body">
+                <div class="progress-section">
+                    
+            <div class="progress-item">
+                <span class="progress-label">专区</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 26.9%"></div></div>
+                <span class="progress-value">26.9%</span>
+            </div>
+            <div class="progress-item">
+                <span class="progress-label">体验店</span>
+                <div class="progress-bar"><div class="progress-fill fusion" style="width: 0.0%"></div></div>
+                <span class="progress-value">0.0%</span>
+            </div>
+            
+                    <div class="overall-progress">
+                        <span>综合达成</span>
+                        <strong>61.0%</strong>
+                    </div>
+                </div>
+                <div class="sub-accounts"><span class="sub-tag 专区渠道">专区 71</span> </div>
+            <div class="wuyi-detail">
+                <span class="detail-item">手机:14</span>
+                <span class="detail-item">融合:17</span>
+            </div>
+            <div class="monthly-section"><div class="monthly-item vs-row"><span>对比昨日</span><span>手机:<span class="vs-positive">+3</span> 融合:<span class="vs-positive">+3</span></span></div></div>
             </div>
         </div>
         
@@ -616,7 +678,7 @@
             
             if (authCode === accessConfig.admin) {
                 currentUser = 'admin';
-                allowedKAs = ["俊捷", "宏翔", "北斗", "智顺", "同舟", "亿丰达", "恒鑫达", "铭洋", "米阳"];
+                allowedKAs = ["北斗", "俊捷", "智顺", "宏翔", "同舟", "恒鑫达", "米阳", "亿丰达", "铭洋"];
                 return true;
             }
             
@@ -650,8 +712,8 @@
             
             if (code === accessConfig.admin) {
                 currentUser = 'admin';
-                allowedKAs = ["俊捷", "宏翔", "北斗", "智顺", "同舟", "亿丰达", "恒鑫达", "铭洋", "米阳"];
-                saveAuth(code, ["俊捷", "宏翔", "北斗", "智顺", "同舟", "亿丰达", "恒鑫达", "铭洋", "米阳"]);
+                allowedKAs = ["北斗", "俊捷", "智顺", "宏翔", "同舟", "恒鑫达", "米阳", "亿丰达", "铭洋"];
+                saveAuth(code, ["北斗", "俊捷", "智顺", "宏翔", "同舟", "恒鑫达", "米阳", "亿丰达", "铭洋"]);
                 showDashboard();
                 return;
             }
