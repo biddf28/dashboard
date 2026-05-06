@@ -348,6 +348,31 @@
         .logout-btn:hover {
             background: #eee;
         }
+        .export-btn {
+            padding: 6px 12px;
+            background: #1a73e8;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .export-btn:hover {
+            background: #1557b0;
+        }
+        .export-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .export-loading {
+            display: inline-block;
+            margin-left: 6px;
+            font-size: 11px;
+        }
+        .btn-group {
+            display: flex;
+            align-items: center;
+        }
         @media (max-width: 768px) {
             body { padding: 12px; }
             .header h1 { font-size: 16px; }
@@ -372,7 +397,10 @@
             <div class="header">
                 <div style="display:flex;justify-content:space-between;align-items:center;">
                     <h1>三所里战役达成看板</h1>
-                    <button class="logout-btn" onclick="logout()">退出登录</button>
+                    <div class="btn-group">
+                        <button class="export-btn" id="exportBtn" onclick="exportData()">导出数据</button>
+                        <button class="logout-btn" onclick="logout()">退出登录</button>
+                    </div>
                 </div>
                 <div class="header-info">
                     <div class="date-info">2026-05-05</div>
@@ -398,7 +426,7 @@
                 <h2>KA达成情况</h2>
                 <div class="cards-container">
                     
-            <div class="ka-card ka-card healthy" data-ka="宏翔">
+            <div class="ka-card ka-card healthy" data-ka="宏翔" data-export="{&quot;ka&quot;: &quot;宏翔&quot;, &quot;fd_so&quot;: 527.0, &quot;fd_target&quot;: 468, &quot;fd_rate&quot;: 1.126068376068376, &quot;kp_so&quot;: 326.0, &quot;kp_target&quot;: 221, &quot;kp_rate&quot;: 1.4751131221719458, &quot;overall_rate&quot;: 1.230781799899447, &quot;fd_phone&quot;: 307.0, &quot;fd_fusion&quot;: 712.0, &quot;bra_phone&quot;: 220.0, &quot;bra_fusion&quot;: 145.0, &quot;vs_yesterday_fd&quot;: -3.0}">
                 <div class="card-header">
                     <span class="ka-name">宏翔</span>
                     <span class="ka-tier">三所里战役</span>
@@ -429,7 +457,7 @@
                 </div>
             </div>
             
-            <div class="ka-card ka-card healthy" data-ka="北斗">
+            <div class="ka-card ka-card healthy" data-ka="北斗" data-export="{&quot;ka&quot;: &quot;北斗&quot;, &quot;fd_so&quot;: 454.0, &quot;fd_target&quot;: 479, &quot;fd_rate&quot;: 0.9478079331941545, &quot;kp_so&quot;: 312.0, &quot;kp_target&quot;: 242, &quot;kp_rate&quot;: 1.2892561983471074, &quot;overall_rate&quot;: 1.0502424127400403, &quot;fd_phone&quot;: 186.0, &quot;fd_fusion&quot;: 96.0, &quot;bra_phone&quot;: 268.0, &quot;bra_fusion&quot;: 197.0, &quot;vs_yesterday_fd&quot;: 10.0}">
                 <div class="card-header">
                     <span class="ka-name">北斗</span>
                     <span class="ka-tier">三所里战役</span>
@@ -460,7 +488,7 @@
                 </div>
             </div>
             
-            <div class="ka-card ka-card good" data-ka="俊捷">
+            <div class="ka-card ka-card good" data-ka="俊捷" data-export="{&quot;ka&quot;: &quot;俊捷&quot;, &quot;fd_so&quot;: 83.0, &quot;fd_target&quot;: 100, &quot;fd_rate&quot;: 0.83, &quot;kp_so&quot;: 53.0, &quot;kp_target&quot;: 39, &quot;kp_rate&quot;: 1.358974358974359, &quot;overall_rate&quot;: 0.9886923076923076, &quot;fd_phone&quot;: 43.0, &quot;fd_fusion&quot;: 39.0, &quot;bra_phone&quot;: 40.0, &quot;bra_fusion&quot;: 80.0, &quot;vs_yesterday_fd&quot;: 4.0}">
                 <div class="card-header">
                     <span class="ka-name">俊捷</span>
                     <span class="ka-tier">三所里战役</span>
@@ -491,7 +519,7 @@
                 </div>
             </div>
             
-            <div class="ka-card ka-card good" data-ka="同舟">
+            <div class="ka-card ka-card good" data-ka="同舟" data-export="{&quot;ka&quot;: &quot;同舟&quot;, &quot;fd_so&quot;: 262.0, &quot;fd_target&quot;: 296, &quot;fd_rate&quot;: 0.8851351351351351, &quot;kp_so&quot;: 179.0, &quot;kp_target&quot;: 154, &quot;kp_rate&quot;: 1.1623376623376624, &quot;overall_rate&quot;: 0.9682958932958933, &quot;fd_phone&quot;: 262.0, &quot;fd_fusion&quot;: 154.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;vs_yesterday_fd&quot;: 1.0}">
                 <div class="card-header">
                     <span class="ka-name">同舟</span>
                     <span class="ka-tier">三所里战役</span>
@@ -522,7 +550,7 @@
                 </div>
             </div>
             
-            <div class="ka-card ka-card good" data-ka="恒鑫达">
+            <div class="ka-card ka-card good" data-ka="恒鑫达" data-export="{&quot;ka&quot;: &quot;恒鑫达&quot;, &quot;fd_so&quot;: 537.0, &quot;fd_target&quot;: 618, &quot;fd_rate&quot;: 0.8689320388349514, &quot;kp_so&quot;: 353.0, &quot;kp_target&quot;: 331, &quot;kp_rate&quot;: 1.066465256797583, &quot;overall_rate&quot;: 0.9281920042237408, &quot;fd_phone&quot;: 274.0, &quot;fd_fusion&quot;: 218.0, &quot;bra_phone&quot;: 263.0, &quot;bra_fusion&quot;: 301.0, &quot;vs_yesterday_fd&quot;: -5.0}">
                 <div class="card-header">
                     <span class="ka-name">恒鑫达</span>
                     <span class="ka-tier">三所里战役</span>
@@ -553,7 +581,7 @@
                 </div>
             </div>
             
-            <div class="ka-card ka-card risk" data-ka="米阳">
+            <div class="ka-card ka-card risk" data-ka="米阳" data-export="{&quot;ka&quot;: &quot;米阳&quot;, &quot;fd_so&quot;: 28.0, &quot;fd_target&quot;: 34, &quot;fd_rate&quot;: 0.8235294117647058, &quot;kp_so&quot;: 11.0, &quot;kp_target&quot;: 15, &quot;kp_rate&quot;: 0.7333333333333333, &quot;overall_rate&quot;: 0.796470588235294, &quot;fd_phone&quot;: 28.0, &quot;fd_fusion&quot;: 31.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;vs_yesterday_fd&quot;: 0.0}">
                 <div class="card-header">
                     <span class="ka-name">米阳</span>
                     <span class="ka-tier">三所里战役</span>
@@ -584,7 +612,7 @@
                 </div>
             </div>
             
-            <div class="ka-card ka-card risk" data-ka="铭洋">
+            <div class="ka-card ka-card risk" data-ka="铭洋" data-export="{&quot;ka&quot;: &quot;铭洋&quot;, &quot;fd_so&quot;: 43.0, &quot;fd_target&quot;: 72, &quot;fd_rate&quot;: 0.5972222222222222, &quot;kp_so&quot;: 33.0, &quot;kp_target&quot;: 33, &quot;kp_rate&quot;: 1.0, &quot;overall_rate&quot;: 0.7180555555555554, &quot;fd_phone&quot;: 43.0, &quot;fd_fusion&quot;: 135.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;vs_yesterday_fd&quot;: 2.0}">
                 <div class="card-header">
                     <span class="ka-name">铭洋</span>
                     <span class="ka-tier">三所里战役</span>
@@ -615,7 +643,7 @@
                 </div>
             </div>
             
-            <div class="ka-card ka-card risk" data-ka="亿丰达">
+            <div class="ka-card ka-card risk" data-ka="亿丰达" data-export="{&quot;ka&quot;: &quot;亿丰达&quot;, &quot;fd_so&quot;: 43.0, &quot;fd_target&quot;: 56, &quot;fd_rate&quot;: 0.7678571428571429, &quot;kp_so&quot;: 16.0, &quot;kp_target&quot;: 27, &quot;kp_rate&quot;: 0.5925925925925926, &quot;overall_rate&quot;: 0.7152777777777777, &quot;fd_phone&quot;: 43.0, &quot;fd_fusion&quot;: 90.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;vs_yesterday_fd&quot;: -1.0}">
                 <div class="card-header">
                     <span class="ka-name">亿丰达</span>
                     <span class="ka-tier">三所里战役</span>
@@ -646,7 +674,7 @@
                 </div>
             </div>
             
-            <div class="ka-card ka-card risk" data-ka="智顺">
+            <div class="ka-card ka-card risk" data-ka="智顺" data-export="{&quot;ka&quot;: &quot;智顺&quot;, &quot;fd_so&quot;: 18.0, &quot;fd_target&quot;: 30, &quot;fd_rate&quot;: 0.6, &quot;kp_so&quot;: 9.0, &quot;kp_target&quot;: 18, &quot;kp_rate&quot;: 0.5, &quot;overall_rate&quot;: 0.57, &quot;fd_phone&quot;: 18.0, &quot;fd_fusion&quot;: 34.0, &quot;bra_phone&quot;: 0.0, &quot;bra_fusion&quot;: 0.0, &quot;vs_yesterday_fd&quot;: 3.0}">
                 <div class="card-header">
                     <span class="ka-name">智顺</span>
                     <span class="ka-tier">三所里战役</span>
@@ -682,9 +710,13 @@
         </div>
     </div>
     
+    <!-- SheetJS CDN for Excel export -->
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+    
     <script>
         const accessConfig = {"admin": "JW970804", "ka_codes": {"亿丰达": "422013", "俊捷": "125137", "北斗": "945102", "同舟": "535179", "喀什亮康": "672304", "喀什卓汇": "450525", "喀什宏景": "632485", "喀什广通": "491707", "喀什成阳": "829925", "喀什星脉": "160600", "喀什通镜": "241729", "图木舒克瑞城通讯": "660785", "宏翔": "221870", "岳普湖塔伊尔": "142195", "巴楚冠为": "596247", "恒鑫达": "501117", "新疆凯旗": "547444", "新疆扬子通讯": "325731", "智顺": "422032", "泽普铭扬": "883840", "疏勒县兴达": "733806", "米阳": "720378", "莎车时代": "652312", "莎车智讯": "160607", "莎车蜀豫": "913087", "铭洋": "576366", "麦盖提信威": "917939", "鼎富": "631081"}};
         const AUTH_EXPIRE_MS = 24 * 60 * 60 * 1000;
+        const dashboardType = 'ssl';
         
         function checkAuthFromStorage() {
             const authCode = localStorage.getItem('dashboard_auth_code');
@@ -804,6 +836,177 @@
                 showDashboard();
             }
         });
+        
+        // 导出数据功能
+        function exportData() {
+            const btn = document.getElementById('exportBtn');
+            btn.disabled = true;
+            btn.textContent = '导出中...';
+            
+            try {
+                const cards = document.querySelectorAll('.ka-card');
+                const exportData = [];
+                
+                cards.forEach(card => {
+                    const ka = card.getAttribute('data-ka');
+                    // 只导出当前用户有权限看到的KA
+                    if (allowedKAs.includes(ka)) {
+                        const exportAttr = card.getAttribute('data-export');
+                        if (exportAttr) {
+                            try {
+                                const data = JSON.parse(exportAttr.replace(/&quot;/g, '"'));
+                                exportData.push(data);
+                            } catch (e) {
+                                console.error('解析导出数据失败:', e);
+                            }
+                        }
+                    }
+                });
+                
+                if (exportData.length === 0) {
+                    alert('没有可导出的数据');
+                    btn.disabled = false;
+                    btn.textContent = '导出数据';
+                    return;
+                }
+                
+                const today = new Date();
+                const dateStr = today.getFullYear() + 
+                    String(today.getMonth() + 1).padStart(2, '0') + 
+                    String(today.getDate()).padStart(2, '0');
+                
+                let wb, filename;
+                
+                if (typeof XLSX !== 'undefined') {
+                    // 使用SheetJS生成Excel
+                    wb = XLSX.utils.book_new();
+                    
+                    if (dashboardType === 'fcka') {
+                        // FDKA分层分级看板导出
+                        const fckaData = exportData.map(d => {
+                            const kpData = d.kp_data || {};
+                            return {
+                                'KA': d.ka,
+                                '层级': d.tier,
+                                '冲刺层级': d.chase_tier,
+                                '手机目标': d.phone_target,
+                                '融合目标': d.fusion_target,
+                                '手机达成': d.phone_so,
+                                '融合达成': d.fusion_so,
+                                '手机达成率': d.phone_rate,
+                                '融合达成率': d.fusion_rate,
+                                '综合达成率': d.overall_rate,
+                                '时间进度': d.time_progress,
+                                '健康状态': d.health_status === 'healthy' ? '健康' : (d.health_status === 'good' ? '良好' : '风险'),
+                                'FD渠道手机': d.fd_phone,
+                                'FD渠道融合': d.fd_fusion,
+                                '体验店手机': d.bra_phone,
+                                '体验店融合': d.bra_fusion,
+                                ...Object.keys(kpData).reduce((acc, kpName) => {
+                                    const kp = kpData[kpName];
+                                    acc[`${kpName}今日`] = kp.daily;
+                                    acc[`${kpName}本周`] = kp.week;
+                                    acc[`${kpName}本月`] = kp.month;
+                                    acc[`${kpName}本季度`] = kp.quarter;
+                                    return acc;
+                                }, {})
+                            };
+                        });
+                        const ws = XLSX.utils.json_to_sheet(fckaData);
+                        XLSX.utils.book_append_sheet(wb, ws, 'FDKA分层分级');
+                        filename = `FDKA数据_${dateStr}.xlsx`;
+                    } else if (dashboardType === 'ssl') {
+                        // 三所里战役看板导出
+                        const sslData = exportData.map(d => ({
+                            'KA': d.ka,
+                            'FD出库SO': d.fd_so,
+                            'FD目标': d.fd_target,
+                            'FD达成率': d.fd_rate,
+                            '重点品SO': d.kp_so,
+                            '重点品目标': d.kp_target,
+                            '重点品达成率': d.kp_rate,
+                            '综合达成率': d.overall_rate,
+                            'FD渠道手机': d.fd_phone,
+                            'FD渠道融合': d.fd_fusion,
+                            '体验店手机': d.bra_phone,
+                            '体验店融合': d.bra_fusion,
+                            '对比昨日FD': d.vs_yesterday_fd
+                        }));
+                        const ws = XLSX.utils.json_to_sheet(sslData);
+                        XLSX.utils.book_append_sheet(wb, ws, '三所里战役');
+                        filename = `三所里战役数据_${dateStr}.xlsx`;
+                    } else {
+                        // 五一生意计划看板导出
+                        const wuyiData = exportData.map(d => ({
+                            'KA': d.ka,
+                            '专区达成率': d.fd_phone_rate,
+                            '体验店达成率': d.bra_phone_rate,
+                            '综合达成率': d.overall_rate,
+                            'FD手机达成': d.fd_phone,
+                            'ND手机达成': d.bra_phone,
+                            '专区融合达成': d.fd_fusion,
+                            '体验店融合达成': d.bra_fusion,
+                            '专区手机SO': d.fd_phone_so,
+                            '体验店手机SO': d.bra_phone_so,
+                            '专区融合SO': d.fd_fusion_so,
+                            '体验店融合SO': d.bra_fusion_so,
+                            '对比昨日手机': d.vs_yesterday_phone,
+                            '对比昨日融合': d.vs_yesterday_fusion
+                        }));
+                        const ws = XLSX.utils.json_to_sheet(wuyiData);
+                        XLSX.utils.book_append_sheet(wb, ws, '五一生意计划');
+                        filename = `五一生意计划数据_${dateStr}.xlsx`;
+                    }
+                    
+                    XLSX.writeFile(wb, filename);
+                } else {
+                    // SheetJS未加载，降级为CSV
+                    let csvContent = '';
+                    if (dashboardType === 'fcka') {
+                        csvContent = 'KA,层级,冲刺层级,手机目标,融合目标,手机达成,融合达成,手机达成率,融合达成率,综合达成率,时间进度,健康状态,FD渠道手机,FD渠道融合,体验店手机,体验店融合
+';
+                        exportData.forEach(d => {
+                            const kpData = d.kp_data || {};
+                            const kpStr = Object.keys(kpData).length > 0 ? 
+                                Object.keys(kpData).map(kpName => {
+                                    const kp = kpData[kpName];
+                                    return `${kpName}今日,${kpName}本周,${kpName}本月,${kpName}本季度`;
+                                }).join(',') : '';
+                            csvContent += `${d.ka},${d.tier},${d.chase_tier},${d.phone_target},${d.fusion_target},${d.phone_so},${d.fusion_so},${d.phone_rate},${d.fusion_rate},${d.overall_rate},${d.time_progress},${d.health_status},${d.fd_phone},${d.fd_fusion},${d.bra_phone},${d.bra_fusion}` + (kpStr ? ',' + kpStr : '') + '
+';
+                        });
+                    } else if (dashboardType === 'ssl') {
+                        csvContent = 'KA,FD出库SO,FD目标,FD达成率,重点品SO,重点品目标,重点品达成率,综合达成率,FD渠道手机,FD渠道融合,体验店手机,体验店融合,对比昨日FD
+';
+                        exportData.forEach(d => {
+                            csvContent += `${d.ka},${d.fd_so},${d.fd_target},${d.fd_rate},${d.kp_so},${d.kp_target},${d.kp_rate},${d.overall_rate},${d.fd_phone},${d.fd_fusion},${d.bra_phone},${d.bra_fusion},${d.vs_yesterday_fd}
+`;
+                        });
+                    } else {
+                        csvContent = 'KA,专区达成率,体验店达成率,综合达成率,FD手机达成,ND手机达成,专区融合达成,体验店融合达成,对比昨日手机,对比昨日融合
+';
+                        exportData.forEach(d => {
+                            csvContent += `${d.ka},${d.fd_phone_rate},${d.bra_phone_rate},${d.overall_rate},${d.fd_phone},${d.bra_phone},${d.fd_fusion},${d.bra_fusion},${d.vs_yesterday_phone},${d.vs_yesterday_fusion}
+`;
+                        });
+                    }
+                    
+                    const blob = new Blob(['﻿' + csvContent], { type: 'text/csv;charset=utf-8;' });
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = `数据导出_${dateStr}.csv`;
+                    link.click();
+                    URL.revokeObjectURL(url);
+                }
+            } catch (e) {
+                console.error('导出失败:', e);
+                alert('导出失败: ' + e.message);
+            } finally {
+                btn.disabled = false;
+                btn.textContent = '导出数据';
+            }
+        }
     </script>
 </body>
 </html>
